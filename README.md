@@ -7,7 +7,7 @@ pip install -r ./requirements.txt
 
 Run dev server
 ------------
-python manage_dev.py runserver 0.0.0.0
+python manage_dev.py runserver 0.0.0.0:8000
 
 Acknowledgements
 ----------------

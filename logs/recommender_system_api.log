@@ -1,0 +1,71 @@
+INFO 07/Oct/2019 08:23:47 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:24:23 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:25:25 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 07/Oct/2019 08:25:25 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:25:29 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 07/Oct/2019 08:25:29 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:25:34 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:25:45 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 07/Oct/2019 08:25:46 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 07/Oct/2019 08:25:46 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:25:46 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:25:52 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 07/Oct/2019 08:25:52 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 07/Oct/2019 08:25:53 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:25:53 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:27:17 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 07/Oct/2019 08:27:17 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 07/Oct/2019 08:27:17 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:27:18 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:27:28 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 07/Oct/2019 08:27:28 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 07/Oct/2019 08:27:28 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:27:29 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:28:19 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:31:03 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/recommender_system_api/utils/connections.py changed, reloading.
+INFO 07/Oct/2019 08:31:04 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:31:11 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/recommender_system_api/utils/connections.py changed, reloading.
+INFO 07/Oct/2019 08:31:12 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:31:26 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
+INFO 07/Oct/2019 08:31:27 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:33:14 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:34:54 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/dev.py changed, reloading.
+INFO 07/Oct/2019 08:34:54 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/dev.py changed, reloading.
+INFO 07/Oct/2019 08:34:55 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:34:56 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:35:15 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:35:44 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:36:08 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 07/Oct/2019 08:36:09 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:36:59 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
+INFO 07/Oct/2019 08:37:00 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:37:39 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:37:57 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
+INFO 07/Oct/2019 08:37:58 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:45:29 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/recommender_env/lib/python3.6/site-packages/rake_nltk/rake.py changed, reloading.
+INFO 07/Oct/2019 08:45:30 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:48:35 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
+INFO 07/Oct/2019 08:48:36 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:48:58 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/recommender_system_api/utils/words_processing.py changed, reloading.
+INFO 07/Oct/2019 08:48:59 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:49:40 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/recommender_system_api/utils/words_processing.py changed, reloading.
+INFO 07/Oct/2019 08:49:41 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:51:35 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:54:51 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/dev.py changed, reloading.
+INFO 07/Oct/2019 08:54:51 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/dev.py changed, reloading.
+INFO 07/Oct/2019 08:54:52 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:54:52 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:57:43 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/dev.py changed, reloading.
+INFO 07/Oct/2019 08:57:43 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/dev.py changed, reloading.
+INFO 07/Oct/2019 08:57:43 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:57:44 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:57:54 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/dev.py changed, reloading.
+INFO 07/Oct/2019 08:57:54 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/dev.py changed, reloading.
+INFO 07/Oct/2019 08:57:55 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:57:55 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:58:44 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/dev.py changed, reloading.
+INFO 07/Oct/2019 08:58:44 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/dev.py changed, reloading.
+INFO 07/Oct/2019 08:58:46 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 08:58:46 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 07/Oct/2019 09:02:48 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/recommender_system_api/utils/connections.py changed, reloading.
+INFO 07/Oct/2019 09:02:49 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader

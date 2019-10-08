@@ -6,13 +6,13 @@ from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 
 class NeuralNetwork(object):
 
-    def __init__(self, rating_df, n_latent_factors):
-        self.rating_df = rating_df
+    def __init__(self, rating_df, train_df, n_latent_factors):
+        self.rating_df = train_df
         self.n_latent_factors = n_latent_factors
-        self.n_users = self.rating_df.user_id.max()
-        self.n_vendors = self.rating_df.vendor_id.max()
-        self.n_genders = int(self.rating_df.gender.max())
-        self.n_vendor_countries = self.rating_df.vd_country_id.max()
+        self.n_users = rating_df.user_id.max()
+        self.n_vendors = rating_df.vendor_id.max()
+        self.n_genders = rating_df.gender.max()
+        self.n_vendor_countries = rating_df.vd_country_id.max()
 
     # TODO: Integrate metadata into model, GridSearch to optimize model
     def model(self, file_path):
@@ -29,8 +29,7 @@ class NeuralNetwork(object):
         gender_embedding = Embedding(input_dim=self.n_genders + 1,
                                      output_dim=self.n_latent_factors, name='Gender-Embedding')(gender_input)
         vendor_country_embedding = Embedding(input_dim=self.n_vendor_countries + 1,
-                                             output_dim=self.n_latent_factors, name='Vendor-Country-Embedding')(
-            vendor_country_input)
+                                             output_dim=self.n_latent_factors, name='Vendor-Country-Embedding')(vendor_country_input)
         # Flatten embedding
         user_vec = Flatten(name='Flatten-Users')(user_embedding)
         vendor_vec = Flatten(name='Flatten-Vendors')(vendor_embedding)
@@ -62,7 +61,7 @@ class NeuralNetwork(object):
 
         checkpoint_path = file_path + '/vendor_neural_net.h5'
         model_checkpoint = ModelCheckpoint(filepath=checkpoint_path, monitor='val_loss', verbose=1,
-                                           save_best_only=True, mode='auto', save_weights_only=True)
+                                           save_best_only=True, mode='auto', save_weights_only=False)
         early_stopping = EarlyStopping(monitor='val_loss', min_delta=0.0001, patience=3, verbose=1,
                                        mode='auto', restore_best_weights=True)
 

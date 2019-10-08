@@ -1,18 +1,18 @@
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error
-from ..utils.connections import get_data_by_pandas
-from ..utils import queries
-from ..utils.words_processing import tfidf
-from ..vendors.neural_network import NeuralNetwork
-from ..vendors.vendor_content_based_filtering import VendorContentBased
+from recommender_system_api.utils.connections import get_data_by_pandas
+from recommender_system_api.utils import queries
+from recommender_system_api.utils.words_processing import tfidf
+from recommender_system_api.vendors.neural_network import NeuralNetwork
+from recommender_system_api.vendors.vendor_content_based_filtering import VendorContentBased
 import pickle
 from tensorflow.keras.models import model_from_json, load_model
 import os
 import pandas as pd
 import numpy as np
-from django.conf import settings
-from .user_profiles import build_user_profile_cb, build_user_profile_nn
+from config.settings import base
+from recommender_system_api.vendors.user_profiles import build_user_profile_cb, build_user_profile_nn
 from django.core.cache.backends.base import DEFAULT_TIMEOUT
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
@@ -21,7 +21,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 # TODO: Session-based RecSys
 # TODO: Hybrid recommendation system using deep learning metadata (user_properties, vendor_properties)
 
-CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
+CACHE_TTL = getattr(base, 'CACHE_TTL', DEFAULT_TIMEOUT)
 
 
 def main_page_recommendation(user_id, gender, vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model, new_user=False, has_reviewed=False):
@@ -95,7 +95,7 @@ def processing_ouput():
     Get the results from all previous processing
     :return:
     """
-    model_path = os.path.join(settings.BASE_DIR, 'recommender_system_api/models/')
+    model_path = os.path.join(base.BASE_DIR, 'recommender_system_api/models/')
     vendor_cosine_sim = pickle.load(open(os.path.join(model_path, 'vendor_cosine_sim.pickle'), 'rb'))
     vendor_id_arr = pickle.load(open(os.path.join(model_path, 'vendor_id.pickle'), 'rb'))
     neural_net_model = load_model(os.path.join(model_path, 'vendor_neural_net.h5'))
@@ -105,18 +105,22 @@ def processing_ouput():
 
 
 def get_and_process_data():
-    stopwords_path = os.path.join(settings.BASE_DIR, 'recommender_system_api/utils/')
-    model_path = os.path.join(settings.BASE_DIR, 'recommender_system_api/models/')
+    stopwords_path = os.path.join(base.BASE_DIR, 'recommender_system_api/utils/')
+    model_path = os.path.join(base.BASE_DIR, 'recommender_system_api/models/')
 
     vendor_df = get_data_by_pandas(query=queries.GET_VENDOR_CONTENT)
     coupon_df = get_data_by_pandas(query=queries.GET_COUPON_CONTENT)
     rating_df = get_data_by_pandas(query=queries.GET_VENDOR_RATING)
 
     rating_df['gender'] = rating_df.gender.astype('int64')
+    rating_df.dropna(inplace=True)
+    rating_df['vd_country_id'] = rating_df.vd_country_id.astype('int64')
+    rating_df.reset_index(drop=True, inplace=True)
+
     train_df, test_df = train_test_split(rating_df, test_size=0.2, shuffle=True)
 
     vendor_content_based = VendorContentBased(vendor_df=vendor_df, coupon_df=coupon_df, rating_df=rating_df)
-    neural_net = NeuralNetwork(train_df, n_latent_factors=20)
+    neural_net = NeuralNetwork(rating_df, train_df, n_latent_factors=20)
 
     processed_vendor = vendor_content_based.vendor_processing()
     processed_coupon = vendor_content_based.coupon_processing()
@@ -155,4 +159,5 @@ def neural_net_evaluation(model, test_df):
     score_absolute = mean_absolute_error(actual, predictions)
     return score_mean, score_absolute
 
-
+if __name__ == '__main__':
+    get_and_process_data()

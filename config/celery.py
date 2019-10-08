@@ -14,6 +14,7 @@ app = Celery('config')
 #   should have a `CELERY_` prefix.
 app.config_from_object(settings, namespace='CELERY')
 
+app.autodiscover_tasks()
 
 @app.task(bind=True)
 def debug_task(self):

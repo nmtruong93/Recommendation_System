@@ -98,7 +98,7 @@ def processing_ouput():
     model_path = os.path.join(base.BASE_DIR, 'recommender_system_api/models/')
     vendor_cosine_sim = pickle.load(open(os.path.join(model_path, 'vendor_cosine_sim.pickle'), 'rb'))
     vendor_id_arr = pickle.load(open(os.path.join(model_path, 'vendor_id.pickle'), 'rb'))
-    neural_net_model = load_model(os.path.join(model_path, 'vendor_neural_net.h5'))
+    neural_net_model = load_model(os.path.join(model_path, 'vendor_neural_net'))
     rating_df = pd.read_feather(os.path.join(model_path, 'rating_df.feather'))
 
     return vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model
@@ -139,7 +139,7 @@ def get_and_process_data():
 
     rating_df.to_feather(os.path.join(model_path, 'rating_df.feather'))
     neural_net_model = neural_net.model(file_path=model_path)
-    neural_net_model.save(os.path.join(model_path, 'vendor_neural_net.h5'))
+    neural_net_model.save(os.path.join(model_path, 'vendor_neural_net'), save_format='tf')
 
     score_mean, score_absolute = neural_net_evaluation(neural_net_model, test_df)
     print("=" * 100)

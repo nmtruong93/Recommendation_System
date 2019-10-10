@@ -44,8 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'recommender_system_api.api',
-    'django_celery_results'
+    'recommender_system_api.api'
 ]
 
 MIDDLEWARE = [

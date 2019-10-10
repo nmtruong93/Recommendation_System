@@ -366,3 +366,210 @@ INFO 08/Oct/2019 09:04:00 autoreload [django.utils.autoreload:trigger_reload:217
 INFO 08/Oct/2019 09:04:00 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
 INFO 08/Oct/2019 09:04:01 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
 INFO 08/Oct/2019 09:04:01 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:35:36 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:37:59 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 08/Oct/2019 11:38:01 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:46:07 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 08/Oct/2019 11:46:09 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:49:36 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 08/Oct/2019 11:49:37 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:49:48 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 08/Oct/2019 11:49:49 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:51:21 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 08/Oct/2019 11:51:22 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:53:53 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 08/Oct/2019 11:53:54 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:54:48 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 08/Oct/2019 11:54:48 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 08/Oct/2019 11:54:49 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:54:49 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:55:27 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:55:49 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/tasks.py changed, reloading.
+INFO 08/Oct/2019 11:55:49 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/tasks.py changed, reloading.
+INFO 08/Oct/2019 11:55:50 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:55:50 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:56:46 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:57:12 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/tasks.py changed, reloading.
+INFO 08/Oct/2019 11:57:13 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/tasks.py changed, reloading.
+INFO 08/Oct/2019 11:57:14 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:57:14 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:58:12 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/tasks.py changed, reloading.
+INFO 08/Oct/2019 11:58:12 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/tasks.py changed, reloading.
+INFO 08/Oct/2019 11:58:13 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:58:13 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:58:24 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/tasks.py changed, reloading.
+INFO 08/Oct/2019 11:58:24 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/tasks.py changed, reloading.
+INFO 08/Oct/2019 11:58:25 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:58:26 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 11:59:23 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 12:00:15 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/tasks.py changed, reloading.
+INFO 08/Oct/2019 12:00:15 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/tasks.py changed, reloading.
+INFO 08/Oct/2019 12:00:16 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 12:00:17 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 12:00:52 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 08/Oct/2019 12:00:52 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 08/Oct/2019 12:00:53 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Oct/2019 12:00:53 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 09/Oct/2019 10:40:35 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+ERROR 09/Oct/2019 10:42:39 log [django.request:log_response:228] Internal Server Error: /recommendation/custom/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 44, in get_custom_page_recommendations
+    vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 79, in specific_recommendation
+    rating_df=rating_df, vendor_id=vendor_id)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 39, in build_user_profile_cb
+    idx = indices[indices == vendor_id].index[0]
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/pandas/core/indexes/base.py", line 4280, in __getitem__
+    return getitem(key)
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 09/Oct/2019 10:42:39 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 500 19296
+WARNING 09/Oct/2019 10:42:40 log [django.request:log_response:228] Not Found: /favicon.ico
+WARNING 09/Oct/2019 10:42:40 basehttp [django.server:log_message:154] "GET /favicon.ico HTTP/1.1" 404 2089
+INFO 09/Oct/2019 10:43:16 basehttp [django.server:log_message:154] "GET /recommendation/custom HTTP/1.1" 301 0
+ERROR 09/Oct/2019 10:43:16 log [django.request:log_response:228] Internal Server Error: /recommendation/custom/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 44, in get_custom_page_recommendations
+    vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 79, in specific_recommendation
+    rating_df=rating_df, vendor_id=vendor_id)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 39, in build_user_profile_cb
+    idx = indices[indices == vendor_id].index[0]
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/pandas/core/indexes/base.py", line 4280, in __getitem__
+    return getitem(key)
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 09/Oct/2019 10:43:16 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 500 19296
+ERROR 09/Oct/2019 10:43:21 log [django.request:log_response:228] Internal Server Error: /recommendation/main/15091/2
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 27, in get_main_page_recommendations
+    vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 48, in main_page_recommendation
+    vendor_recommendation_nn = build_user_profile_nn(user_id, gender, model=neural_net_model, rating_df=rating_df)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 16, in build_user_profile_nn
+    user_id = rating_df[rating_df.user_id == user_id].user_id.iloc[0]
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/pandas/core/indexing.py", line 1424, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/pandas/core/indexing.py", line 2157, in _getitem_axis
+    self._validate_integer(key, axis)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/venv/lib/python3.6/site-packages/pandas/core/indexing.py", line 2088, in _validate_integer
+    raise IndexError("single positional indexer is out-of-bounds")
+IndexError: single positional indexer is out-of-bounds
+ERROR 09/Oct/2019 10:43:21 basehttp [django.server:log_message:154] "GET /recommendation/main/15091/2 HTTP/1.1" 500 19760
+INFO 10/Oct/2019 07:38:58 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 07:49:22 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 07:59:43 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+WARNING 10/Oct/2019 07:59:47 log [django.request:log_response:228] Not Found: /
+WARNING 10/Oct/2019 07:59:47 basehttp [django.server:log_message:154] "GET / HTTP/1.1" 404 2038
+WARNING 10/Oct/2019 07:59:48 log [django.request:log_response:228] Not Found: /favicon.ico
+WARNING 10/Oct/2019 07:59:48 basehttp [django.server:log_message:154] "GET /favicon.ico HTTP/1.1" 404 2089
+INFO 10/Oct/2019 08:02:33 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+WARNING 10/Oct/2019 08:02:36 log [django.request:log_response:228] Not Found: /
+WARNING 10/Oct/2019 08:02:36 basehttp [django.server:log_message:154] "GET / HTTP/1.1" 404 2038
+INFO 10/Oct/2019 08:18:53 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 08:19:10 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 08:19:53 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 08:23:14 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 08:23:55 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+ERROR 10/Oct/2019 08:24:24 log [django.request:log_response:228] Internal Server Error: /recommendation/custom/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 44, in get_custom_page_recommendations
+    vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 79, in specific_recommendation
+    rating_df=rating_df, vendor_id=vendor_id)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 39, in build_user_profile_cb
+    idx = indices[indices == vendor_id].index[0]
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 4280, in __getitem__
+    return getitem(key)
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 10/Oct/2019 08:24:24 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 500 20286
+WARNING 10/Oct/2019 08:24:25 log [django.request:log_response:228] Not Found: /favicon.ico
+WARNING 10/Oct/2019 08:24:25 basehttp [django.server:log_message:154] "GET /favicon.ico HTTP/1.1" 404 2089
+INFO 10/Oct/2019 08:35:31 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
+INFO 10/Oct/2019 08:35:33 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 08:36:14 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
+INFO 10/Oct/2019 08:36:15 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 08:39:29 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 09:06:59 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
+INFO 10/Oct/2019 09:07:01 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 09:08:53 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 09:12:19 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 10/Oct/2019 09:12:21 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader

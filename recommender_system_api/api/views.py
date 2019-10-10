@@ -13,7 +13,7 @@ vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model = processing_ouput
 
 @api_view(['GET', 'POST'])
 @renderer_classes([JSONRenderer])
-def get_main_page_recommendations(request, user_id=15091, gender=2, new_user=False, has_reviewed=False):
+def get_main_page_recommendations(request, user_id=7973, gender=2, new_user=False, has_reviewed=False):
     """
 
     :param request:
@@ -31,7 +31,7 @@ def get_main_page_recommendations(request, user_id=15091, gender=2, new_user=Fal
 
 @api_view(['GET', 'POST'])
 @renderer_classes([JSONRenderer])
-def get_custom_page_recommendations(request, user_id=15091, gender=2, vendor_id=11860):
+def get_custom_page_recommendations(request, user_id=7973, gender=2, vendor_id=10131):
     """
 
     :param request:

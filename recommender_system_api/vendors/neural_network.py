@@ -59,7 +59,7 @@ class NeuralNetwork(object):
         model = Model([user_input, gender_input, vendor_input, vendor_country_input], out)
         model.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy'])
 
-        checkpoint_path = file_path + '/vendor_neural_net.h5'
+        checkpoint_path = file_path + '/vendor_neural.h5'
         model_checkpoint = ModelCheckpoint(filepath=checkpoint_path, monitor='val_loss', verbose=1,
                                            save_best_only=True, mode='auto', save_weights_only=False)
         early_stopping = EarlyStopping(monitor='val_loss', min_delta=0.0001, patience=3, verbose=1,

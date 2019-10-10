@@ -30,7 +30,7 @@ env = environ.Env()
 SECRET_KEY = '(stsvoa9#0l(_$xg!@n1ksrn6+)ss7mlw5+*73l7eg0ubbj#84'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 

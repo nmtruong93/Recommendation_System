@@ -573,3 +573,336 @@ INFO 10/Oct/2019 09:07:01 autoreload [django.utils.autoreload:run_with_reloader:
 INFO 10/Oct/2019 09:08:53 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
 INFO 10/Oct/2019 09:12:19 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
 INFO 10/Oct/2019 09:12:21 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 09:14:55 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 09:17:53 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 10/Oct/2019 09:17:55 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 09:18:00 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 09:19:14 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/urls.py changed, reloading.
+INFO 10/Oct/2019 09:19:15 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 09:20:22 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 09:23:08 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+ERROR 10/Oct/2019 09:23:19 log [django.request:log_response:228] Internal Server Error: /recommendation/custom/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 44, in get_custom_page_recommendations
+    vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 83, in specific_recommendation
+    rating_df=rating_df, vendor_id=vendor_id)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 39, in build_user_profile_cb
+    idx = indices[indices == vendor_id].index[0]
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 4280, in __getitem__
+    return getitem(key)
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 10/Oct/2019 09:23:19 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 500 27
+WARNING 10/Oct/2019 09:23:31 log [django.request:log_response:228] Not Found: /
+WARNING 10/Oct/2019 09:23:31 basehttp [django.server:log_message:154] "GET / HTTP/1.1" 404 77
+WARNING 10/Oct/2019 09:23:32 log [django.request:log_response:228] Not Found: /favicon.ico
+WARNING 10/Oct/2019 09:23:32 basehttp [django.server:log_message:154] "GET /favicon.ico HTTP/1.1" 404 77
+WARNING 10/Oct/2019 09:24:14 log [django.request:log_response:228] Not Found: /
+WARNING 10/Oct/2019 09:24:14 basehttp [django.server:log_message:154] "GET / HTTP/1.1" 404 77
+INFO 10/Oct/2019 09:24:22 basehttp [django.server:log_message:154] "GET /admin HTTP/1.1" 301 0
+INFO 10/Oct/2019 09:24:22 basehttp [django.server:log_message:154] "GET /admin/ HTTP/1.1" 302 0
+INFO 10/Oct/2019 09:24:22 basehttp [django.server:log_message:154] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+WARNING 10/Oct/2019 09:24:22 log [django.request:log_response:228] Not Found: /static/admin/css/base.css
+WARNING 10/Oct/2019 09:24:22 log [django.request:log_response:228] Not Found: /static/admin/css/login.css
+WARNING 10/Oct/2019 09:24:22 log [django.request:log_response:228] Not Found: /static/admin/css/responsive.css
+WARNING 10/Oct/2019 09:24:22 basehttp [django.server:log_message:154] "GET /static/admin/css/login.css HTTP/1.1" 404 77
+WARNING 10/Oct/2019 09:24:22 basehttp [django.server:log_message:154] "GET /static/admin/css/base.css HTTP/1.1" 404 77
+WARNING 10/Oct/2019 09:24:22 basehttp [django.server:log_message:154] "GET /static/admin/css/responsive.css HTTP/1.1" 404 77
+INFO 10/Oct/2019 09:25:01 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 09:29:00 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+WARNING 10/Oct/2019 09:29:11 log [django.request:log_response:228] Not Found: /
+WARNING 10/Oct/2019 09:29:11 basehttp [django.server:log_message:154] "GET / HTTP/1.1" 404 77
+WARNING 10/Oct/2019 09:29:11 log [django.request:log_response:228] Not Found: /favicon.ico
+WARNING 10/Oct/2019 09:29:11 basehttp [django.server:log_message:154] "GET /favicon.ico HTTP/1.1" 404 77
+ERROR 10/Oct/2019 09:29:16 log [django.request:log_response:228] Internal Server Error: /recommendation/custom/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 44, in get_custom_page_recommendations
+    vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 83, in specific_recommendation
+    rating_df=rating_df, vendor_id=vendor_id)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 39, in build_user_profile_cb
+    idx = indices[indices == vendor_id].index[0]
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 4280, in __getitem__
+    return getitem(key)
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 10/Oct/2019 09:29:16 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 500 27
+ERROR 10/Oct/2019 09:30:26 log [django.request:log_response:228] Internal Server Error: /recommendation/main/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 27, in get_main_page_recommendations
+    vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 48, in main_page_recommendation
+    vendor_recommendation_nn = build_user_profile_nn(user_id, gender, model=neural_net_model, rating_df=rating_df)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 19, in build_user_profile_nn
+    predictions = model.predict([user_id, gender, vendor_id, vd_country_id])
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/training.py", line 909, in predict
+    use_multiprocessing=use_multiprocessing)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/training_v2.py", line 462, in predict
+    steps=steps, callbacks=callbacks, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/training_v2.py", line 444, in _model_iteration
+    total_epochs=1)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/training_v2.py", line 123, in run_one_epoch
+    batch_outs = execution_function(iterator)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/training_v2_utils.py", line 86, in execution_function
+    distributed_function(input_fn))
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/eager/def_function.py", line 457, in __call__
+    result = self._call(*args, **kwds)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/eager/def_function.py", line 503, in _call
+    self._initialize(args, kwds, add_initializers_to=initializer_map)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/eager/def_function.py", line 408, in _initialize
+    *args, **kwds))
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/eager/function.py", line 1848, in _get_concrete_function_internal_garbage_collected
+    graph_function, _, _ = self._maybe_define_function(args, kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/eager/function.py", line 2150, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/eager/function.py", line 2041, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/framework/func_graph.py", line 915, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/eager/def_function.py", line 358, in wrapped_fn
+    return weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/training_v2_utils.py", line 73, in distributed_function
+    per_replica_function, args=(model, x, y, sample_weights))
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/distribute/distribute_lib.py", line 760, in experimental_run_v2
+    return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/distribute/distribute_lib.py", line 1787, in call_for_each_replica
+    return self._call_for_each_replica(fn, args, kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/distribute/distribute_lib.py", line 2132, in _call_for_each_replica
+    return fn(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/autograph/impl/api.py", line 292, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/training_v2_utils.py", line 162, in _predict_on_batch
+    return predict_on_batch(model, x)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/training_v2_utils.py", line 370, in predict_on_batch
+    return model(inputs)  # pylint: disable=not-callable
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/base_layer.py", line 847, in __call__
+    outputs = call_fn(cast_inputs, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/saving/saved_model/utils.py", line 57, in return_outputs_and_add_losses
+    outputs, losses = fn(inputs, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/saving/saved_model/utils.py", line 111, in wrap_with_training_arg
+    lambda: replace_training_and_call(False))
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/utils/tf_utils.py", line 59, in smart_cond
+    pred, true_fn=true_fn, false_fn=false_fn, name=name)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/framework/smart_cond.py", line 56, in smart_cond
+    return false_fn()
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/saving/saved_model/utils.py", line 111, in <lambda>
+    lambda: replace_training_and_call(False))
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/keras/saving/saved_model/utils.py", line 106, in replace_training_and_call
+    return wrapped_call(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/eager/def_function.py", line 457, in __call__
+    result = self._call(*args, **kwds)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/eager/def_function.py", line 494, in _call
+    results = self._stateful_fn(*args, **kwds)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/eager/function.py", line 1822, in __call__
+    graph_function, args, kwargs = self._maybe_define_function(args, kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/eager/function.py", line 2150, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/eager/function.py", line 2041, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/framework/func_graph.py", line 915, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/eager/def_function.py", line 358, in wrapped_fn
+    return weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/tensorflow_core/python/saved_model/function_deserialization.py", line 262, in restored_function_body
+    "\n\n".join(signature_descriptions)))
+ValueError: Could not find matching function to call loaded from the SavedModel. Got:
+  Positional arguments (3 total):
+    * [<tf.Tensor 'inputs:0' shape=(None, 1) dtype=int64>, <tf.Tensor 'inputs_1:0' shape=(None, 1) dtype=int64>, <tf.Tensor 'inputs_2:0' shape=(None, 1) dtype=int64>, <tf.Tensor 'inputs_3:0' shape=(None, 1) dtype=int64>]
+    * False
+    * None
+  Keyword arguments: {}
+
+Expected these arguments to match one of the following 4 option(s):
+
+Option 1:
+  Positional arguments (3 total):
+    * [TensorSpec(shape=(None, 1), dtype=tf.float32, name='User-Input'), TensorSpec(shape=(None, 1), dtype=tf.float32, name='Gender-Input'), TensorSpec(shape=(None, 1), dtype=tf.float32, name='Vendor-Input'), TensorSpec(shape=(None, 1), dtype=tf.float32, name='Vendor-Country-Input')]
+    * True
+    * None
+  Keyword arguments: {}
+
+Option 2:
+  Positional arguments (3 total):
+    * [TensorSpec(shape=(None, 1), dtype=tf.float32, name='inputs/0'), TensorSpec(shape=(None, 1), dtype=tf.float32, name='inputs/1'), TensorSpec(shape=(None, 1), dtype=tf.float32, name='inputs/2'), TensorSpec(shape=(None, 1), dtype=tf.float32, name='inputs/3')]
+    * True
+    * None
+  Keyword arguments: {}
+
+Option 3:
+  Positional arguments (3 total):
+    * [TensorSpec(shape=(None, 1), dtype=tf.float32, name='inputs/0'), TensorSpec(shape=(None, 1), dtype=tf.float32, name='inputs/1'), TensorSpec(shape=(None, 1), dtype=tf.float32, name='inputs/2'), TensorSpec(shape=(None, 1), dtype=tf.float32, name='inputs/3')]
+    * False
+    * None
+  Keyword arguments: {}
+
+Option 4:
+  Positional arguments (3 total):
+    * [TensorSpec(shape=(None, 1), dtype=tf.float32, name='User-Input'), TensorSpec(shape=(None, 1), dtype=tf.float32, name='Gender-Input'), TensorSpec(shape=(None, 1), dtype=tf.float32, name='Vendor-Input'), TensorSpec(shape=(None, 1), dtype=tf.float32, name='Vendor-Country-Input')]
+    * False
+    * None
+  Keyword arguments: {}
+ERROR 10/Oct/2019 09:30:26 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 500 27
+INFO 10/Oct/2019 09:31:29 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
+INFO 10/Oct/2019 09:31:30 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 09:31:42 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
+INFO 10/Oct/2019 09:31:43 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 09:33:11 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+ERROR 10/Oct/2019 09:33:17 log [django.request:log_response:228] Internal Server Error: /recommendation/custom/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 44, in get_custom_page_recommendations
+    vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 83, in specific_recommendation
+    rating_df=rating_df, vendor_id=vendor_id)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 39, in build_user_profile_cb
+    idx = indices[indices == vendor_id].index[0]
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 4280, in __getitem__
+    return getitem(key)
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 10/Oct/2019 09:33:17 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 500 27
+ERROR 10/Oct/2019 09:33:18 log [django.request:log_response:228] Internal Server Error: /recommendation/custom/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 44, in get_custom_page_recommendations
+    vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 83, in specific_recommendation
+    rating_df=rating_df, vendor_id=vendor_id)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 39, in build_user_profile_cb
+    idx = indices[indices == vendor_id].index[0]
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 4280, in __getitem__
+    return getitem(key)
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 10/Oct/2019 09:33:18 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 500 27
+WARNING 10/Oct/2019 09:33:30 log [django.request:log_response:228] Not Found: /favicon.ico
+WARNING 10/Oct/2019 09:33:30 basehttp [django.server:log_message:154] "GET /favicon.ico HTTP/1.1" 404 77
+ERROR 10/Oct/2019 09:33:35 log [django.request:log_response:228] Internal Server Error: /recommendation/custom/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 44, in get_custom_page_recommendations
+    vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 83, in specific_recommendation
+    rating_df=rating_df, vendor_id=vendor_id)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 39, in build_user_profile_cb
+    idx = indices[indices == vendor_id].index[0]
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 4280, in __getitem__
+    return getitem(key)
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 10/Oct/2019 09:33:35 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 500 27
+INFO 10/Oct/2019 09:33:48 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 200 3729
+INFO 10/Oct/2019 09:33:58 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 200 3729

@@ -31,7 +31,7 @@ def get_main_page_recommendations(request, user_id=7973, gender=2, new_user=Fals
 
 @api_view(['GET', 'POST'])
 @renderer_classes([JSONRenderer])
-def get_custom_page_recommendations(request, user_id=7973, gender=2, vendor_id=10131):
+def get_custom_page_recommendations(request, user_id=7973, gender=2, vendor_id=56507):
     """
 
     :param request:

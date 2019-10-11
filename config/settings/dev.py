@@ -17,8 +17,8 @@ DATABASES = {
     'remote': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'tcoin_api_staging',
-        'USER': 'reportuser',
-        'PASSWORD': 'TeeCoin@2018!@#',
+        'USER': 'postgres',
+        'PASSWORD': 'Nar85izwey',
         'HOST': 'teecoin-backend-test.cnnf42vc9hvq.ap-southeast-1.rds.amazonaws.com',
         'PORT': '5432',
     },

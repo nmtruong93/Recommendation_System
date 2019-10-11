@@ -1,7 +1,7 @@
-from django.db import connection
+from django.db import connections
 import pandas as pd
 
-# connection = connections['remote']
+connection = connections['remote']
 
 
 def get_data_by_pandas(query):

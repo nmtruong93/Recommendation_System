@@ -1,5 +1,8 @@
 Recommendation System
 =======
+import nltk
+
+nltk.download('punkt')
 
 Install requirements
 ------------
@@ -8,6 +11,12 @@ pip install -r ./requirements.txt
 Run dev server
 ------------
 python manage_dev.py runserver 0.0.0.0:8000
+
+
+Cron job
+------------
+python manage_dev.py runcrons "recommender_system_api.api.tasks.LoadModelsCronJob" --force
+
 
 Acknowledgements
 ----------------

@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'recommender_system_api.api'
+    'recommender_system_api.api',
+    "django_cron",
 ]
 
 MIDDLEWARE = [
@@ -177,34 +178,4 @@ REST_FRAMEWORK = {
     ]
 }
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/',
-        'OPTIONS': {
-            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-        }
-    }
-}
-
 CACHE_TTL = 60 * 15
-
-from celery.schedules import crontab
-# CELERY STUFF
-CELERY_BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
-CELERY_CACHE_BACKEND = 'django-cache'
-CELERY_ACCEPT_CONTENT = ['application/json']
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_ENABLE_UTC = False
-CELERY_TIMEZONE = 'Asia/Singapore'
-CELERYD_TASK_TIME_LIMIT = 600
-CELERYD_TASK_SOFT_TIME_LIMIT = 600
-CELERYBEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
-CELERY_BEAT_SCHEDULE = {
-    'update_models': {
-        'task': 'recommender_system_api.api.tasks.update_models',
-        'schedule': crontab()
-    }
-}

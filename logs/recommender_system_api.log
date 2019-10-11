@@ -948,3 +948,421 @@ INFO 10/Oct/2019 12:50:03 autoreload [django.utils.autoreload:run_with_reloader:
 INFO 10/Oct/2019 12:50:32 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
 INFO 10/Oct/2019 12:50:41 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 200 364
 INFO 10/Oct/2019 12:50:49 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 200 3729
+INFO 11/Oct/2019 09:04:49 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 09:06:06 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
+INFO 11/Oct/2019 09:06:07 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 09:14:25 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 09:16:59 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 09:17:07 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 200 364
+INFO 11/Oct/2019 09:17:13 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 200 364
+INFO 11/Oct/2019 09:17:17 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 200 364
+INFO 11/Oct/2019 09:17:25 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 200 3729
+INFO 11/Oct/2019 09:20:15 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 11/Oct/2019 09:20:15 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 09:20:47 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 09:21:10 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 200 3729
+INFO 11/Oct/2019 09:22:28 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 200 3729
+INFO 11/Oct/2019 09:22:32 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 200 3729
+INFO 11/Oct/2019 09:22:41 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 200 3729
+INFO 11/Oct/2019 09:23:30 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 11/Oct/2019 09:23:31 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+ERROR 11/Oct/2019 09:23:56 log [django.request:log_response:228] Internal Server Error: /recommendation/main/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 27, in get_main_page_recommendations
+    recommendation = main_page_recommendation(user_id, gender, vendor_id_arr, rating_df,
+NameError: name 'vendor_id_arr' is not defined
+ERROR 11/Oct/2019 09:23:56 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 500 27
+ERROR 11/Oct/2019 09:23:58 log [django.request:log_response:228] Internal Server Error: /recommendation/main/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 27, in get_main_page_recommendations
+    recommendation = main_page_recommendation(user_id, gender, vendor_id_arr, rating_df,
+NameError: name 'vendor_id_arr' is not defined
+ERROR 11/Oct/2019 09:23:58 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 500 27
+INFO 11/Oct/2019 09:24:24 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+ERROR 11/Oct/2019 09:24:29 log [django.request:log_response:228] Internal Server Error: /recommendation/main/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 27, in get_main_page_recommendations
+    recommendation = main_page_recommendation(user_id, gender, vendor_id_arr, rating_df,
+NameError: name 'vendor_id_arr' is not defined
+ERROR 11/Oct/2019 09:24:29 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 500 27
+INFO 11/Oct/2019 09:24:50 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 11/Oct/2019 09:24:51 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 09:25:08 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 11/Oct/2019 09:25:09 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 09:25:30 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 11/Oct/2019 09:25:31 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+ERROR 11/Oct/2019 09:25:36 log [django.request:log_response:228] Internal Server Error: /recommendation/main/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 28, in get_main_page_recommendations
+    vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 46, in main_page_recommendation
+    cosine_sim=vendor_cosine_sim, rating_df=rating_df)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 43, in build_user_profile_cb
+    vendors_rated_by_user = rating_df[rating_df.user_id == user_id][['vendor_id', 'rating']]
+AttributeError: 'NoneType' object has no attribute 'user_id'
+ERROR 11/Oct/2019 09:25:36 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 500 27
+ERROR 11/Oct/2019 09:25:37 log [django.request:log_response:228] Internal Server Error: /recommendation/main/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 28, in get_main_page_recommendations
+    vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 46, in main_page_recommendation
+    cosine_sim=vendor_cosine_sim, rating_df=rating_df)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 43, in build_user_profile_cb
+    vendors_rated_by_user = rating_df[rating_df.user_id == user_id][['vendor_id', 'rating']]
+AttributeError: 'NoneType' object has no attribute 'user_id'
+ERROR 11/Oct/2019 09:25:37 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 500 27
+ERROR 11/Oct/2019 09:26:00 log [django.request:log_response:228] Internal Server Error: /recommendation/main/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 28, in get_main_page_recommendations
+    vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 46, in main_page_recommendation
+    cosine_sim=vendor_cosine_sim, rating_df=rating_df)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 43, in build_user_profile_cb
+    vendors_rated_by_user = rating_df[rating_df.user_id == user_id][['vendor_id', 'rating']]
+AttributeError: 'NoneType' object has no attribute 'user_id'
+ERROR 11/Oct/2019 09:26:00 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 500 27
+ERROR 11/Oct/2019 09:26:01 log [django.request:log_response:228] Internal Server Error: /recommendation/main/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 28, in get_main_page_recommendations
+    vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 46, in main_page_recommendation
+    cosine_sim=vendor_cosine_sim, rating_df=rating_df)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 43, in build_user_profile_cb
+    vendors_rated_by_user = rating_df[rating_df.user_id == user_id][['vendor_id', 'rating']]
+AttributeError: 'NoneType' object has no attribute 'user_id'
+ERROR 11/Oct/2019 09:26:01 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 500 27
+ERROR 11/Oct/2019 09:26:02 log [django.request:log_response:228] Internal Server Error: /recommendation/main/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 28, in get_main_page_recommendations
+    vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 46, in main_page_recommendation
+    cosine_sim=vendor_cosine_sim, rating_df=rating_df)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 43, in build_user_profile_cb
+    vendors_rated_by_user = rating_df[rating_df.user_id == user_id][['vendor_id', 'rating']]
+AttributeError: 'NoneType' object has no attribute 'user_id'
+ERROR 11/Oct/2019 09:26:02 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 500 27
+ERROR 11/Oct/2019 09:26:02 log [django.request:log_response:228] Internal Server Error: /recommendation/main/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 28, in get_main_page_recommendations
+    vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 46, in main_page_recommendation
+    cosine_sim=vendor_cosine_sim, rating_df=rating_df)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 43, in build_user_profile_cb
+    vendors_rated_by_user = rating_df[rating_df.user_id == user_id][['vendor_id', 'rating']]
+AttributeError: 'NoneType' object has no attribute 'user_id'
+ERROR 11/Oct/2019 09:26:02 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 500 27
+ERROR 11/Oct/2019 09:26:59 log [django.request:log_response:228] Internal Server Error: /recommendation/main/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 28, in get_main_page_recommendations
+    vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 46, in main_page_recommendation
+    cosine_sim=vendor_cosine_sim, rating_df=rating_df)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 43, in build_user_profile_cb
+    vendors_rated_by_user = rating_df[rating_df.user_id == user_id][['vendor_id', 'rating']]
+AttributeError: 'NoneType' object has no attribute 'user_id'
+ERROR 11/Oct/2019 09:26:59 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 500 27
+ERROR 11/Oct/2019 09:27:00 log [django.request:log_response:228] Internal Server Error: /recommendation/main/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 28, in get_main_page_recommendations
+    vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 46, in main_page_recommendation
+    cosine_sim=vendor_cosine_sim, rating_df=rating_df)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 43, in build_user_profile_cb
+    vendors_rated_by_user = rating_df[rating_df.user_id == user_id][['vendor_id', 'rating']]
+AttributeError: 'NoneType' object has no attribute 'user_id'
+ERROR 11/Oct/2019 09:27:00 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 500 27
+ERROR 11/Oct/2019 09:27:01 log [django.request:log_response:228] Internal Server Error: /recommendation/main/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 28, in get_main_page_recommendations
+    vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 46, in main_page_recommendation
+    cosine_sim=vendor_cosine_sim, rating_df=rating_df)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/user_profiles.py", line 43, in build_user_profile_cb
+    vendors_rated_by_user = rating_df[rating_df.user_id == user_id][['vendor_id', 'rating']]
+AttributeError: 'NoneType' object has no attribute 'user_id'
+ERROR 11/Oct/2019 09:27:01 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 500 27
+INFO 11/Oct/2019 09:27:14 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 11/Oct/2019 09:27:14 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 09:34:11 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
+INFO 11/Oct/2019 09:34:12 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 09:34:43 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
+INFO 11/Oct/2019 09:34:44 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 09:35:21 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/neural_network.py changed, reloading.
+INFO 11/Oct/2019 09:35:22 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 09:37:18 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/neural_network.py changed, reloading.
+INFO 11/Oct/2019 09:37:19 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 09:37:49 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 11/Oct/2019 09:37:50 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 10:52:44 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/config/settings/base.py changed, reloading.
+INFO 11/Oct/2019 10:52:45 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 10:54:21 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+ERROR 11/Oct/2019 10:54:34 log [django.request:log_response:228] Internal Server Error: /recommendation/custom/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 44, in get_custom_page_recommendations
+    vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model)
+NameError: name 'vendor_id_arr' is not defined
+ERROR 11/Oct/2019 10:54:34 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 500 27
+INFO 11/Oct/2019 10:54:47 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 11/Oct/2019 10:54:48 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Oct/2019 10:54:56 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 200 364
+INFO 11/Oct/2019 10:55:16 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 200 3729

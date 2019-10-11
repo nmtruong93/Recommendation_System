@@ -62,9 +62,9 @@ class NeuralNetwork(object):
         return model
 
     def train(self, file_path, model):
-        checkpoint_path = file_path + 'vendor_neural.h5'
+        checkpoint_path = file_path + 'vendor_neural_net.h5'
         model_checkpoint = ModelCheckpoint(filepath=checkpoint_path, monitor='val_loss', verbose=1,
-                                           save_best_only=True, mode='auto', save_weights_only=False)
+                                           save_best_only=True, mode='auto', save_weights_only=True)
         early_stopping = EarlyStopping(monitor='val_loss', min_delta=0.0001, patience=3, verbose=1,
                                        mode='auto', restore_best_weights=True)
         model.fit(

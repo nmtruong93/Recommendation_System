@@ -98,17 +98,13 @@ def processing_ouput():
     model_path = os.path.join(base.BASE_DIR, 'recommender_system_api/models/')
     vendor_cosine_sim = pickle.load(open(os.path.join(model_path, 'vendor_cosine_sim.pickle'), 'rb'))
     vendor_id_arr = pickle.load(open(os.path.join(model_path, 'vendor_id.pickle'), 'rb'))
-    # neural_net_model = load_model(os.path.join(model_path, 'vendor_neural_net.h5'))
+    neural_net_model = load_model(os.path.join(model_path, 'vendor_neural_net.h5'))
     rating_df = pd.read_feather(os.path.join(model_path, 'rating_df.feather'))
-    neural_net = NeuralNetwork(rating_df, n_latent_factors=20)
-    neural_net_model = neural_net.model()
-    weights = pickle.load(open(os.path.join(model_path, 'weights.pickle'), 'rb'))
-    neural_net_model.set_weights(weights)
-
     return vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model
 
 
 def get_and_process_data():
+    print("Start")
     stopwords_path = os.path.join(base.BASE_DIR, 'recommender_system_api/utils/')
     model_path = os.path.join(base.BASE_DIR, 'recommender_system_api/models/')
 
@@ -145,10 +141,7 @@ def get_and_process_data():
 
     neural_net_model = neural_net.model()
     neural_net_model = neural_net.train(model_path, neural_net_model)
-    weights = neural_net_model.get_weights()
-    pickle.dump(weights, open(os.path.join(model_path, 'weights.pickle'), 'wb'),
-                protocol=pickle.HIGHEST_PROTOCOL)
-    # neural_net_model.save(os.path.join(model_path, 'vendor_neural_net.h5'))
+    neural_net_model.save(os.path.join(model_path, 'vendor_neural_net.h5'))
 
     score_mean, score_absolute = neural_net_evaluation(neural_net_model, test_df)
     print("=" * 100)

@@ -17,7 +17,15 @@ Cron job
 ------------
 python manage_dev.py runcrons "recommender_system_api.api.tasks.LoadModelsCronJob" --force
 
+[Cronjob_Django](https://blog.khophi.co/django-management-commands-via-cron/)
+[Cronjob_Mac](https://ole.michelsen.dk/blog/schedule-jobs-with-crontab-on-mac-osx.html)
 
+1. Open terminal and type: `env EDITOR=nano crontab -e`
+2. A editor will open and type: (run retrain_model.sh and log to file retrain_model.log)
+   `*/2 * * * * cd /User/teecoin/PycharmProjects/recommender_system_api/retrain_model.sh >> /User/teecoin/PycharmProjects/recommender_system_api/logs/retrain_model.log 2>&1`
+3. Save it and wait
+
+**Note**: Change your directory path in *retrain_model.sh* and *crontab*
 Acknowledgements
 ----------------
 

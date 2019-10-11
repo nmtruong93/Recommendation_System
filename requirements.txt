@@ -62,4 +62,3 @@ werkzeug==0.15.6
 wrapt==1.11.2
 zipp==0.6.0
 django-environ==0.4.5
-django_cron==0.5.1

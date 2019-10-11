@@ -6,8 +6,8 @@ from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 
 class NeuralNetwork(object):
 
-    def __init__(self, rating_df, train_df, n_latent_factors):
-        self.rating_df = train_df
+    def __init__(self, rating_df, n_latent_factors):
+        self.rating_df = rating_df
         self.n_latent_factors = n_latent_factors
         self.n_users = rating_df.user_id.max()
         self.n_vendors = rating_df.vendor_id.max()
@@ -15,7 +15,7 @@ class NeuralNetwork(object):
         self.n_vendor_countries = rating_df.vd_country_id.max()
 
     # TODO: Integrate metadata into model, GridSearch to optimize model
-    def model(self, file_path):
+    def model(self):
         user_input = Input(shape=[1], name='User-Input')
         vendor_input = Input(shape=[1], name='Vendor-Input')
         gender_input = Input(shape=[1], name='Gender-Input')
@@ -59,18 +59,19 @@ class NeuralNetwork(object):
         model = Model([user_input, gender_input, vendor_input, vendor_country_input], out)
         model.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy'])
 
-        checkpoint_path = file_path + '/vendor_neural.h5'
+        return model
+
+    def train(self, file_path, model):
+        checkpoint_path = file_path + 'vendor_neural.h5'
         model_checkpoint = ModelCheckpoint(filepath=checkpoint_path, monitor='val_loss', verbose=1,
                                            save_best_only=True, mode='auto', save_weights_only=False)
         early_stopping = EarlyStopping(monitor='val_loss', min_delta=0.0001, patience=3, verbose=1,
                                        mode='auto', restore_best_weights=True)
-
         model.fit(
             x=[self.rating_df.user_id, self.rating_df.gender, self.rating_df.vendor_id, self.rating_df.vd_country_id],
             y=self.rating_df.rating,
             validation_split=0.2, epochs=100, verbose=1, callbacks=[model_checkpoint, early_stopping])
         return model
-
     @staticmethod
     def plot_loss_accuracy(history, file_path='../../models/training_loss.png'):
         plt.plot(history.history['loss'])

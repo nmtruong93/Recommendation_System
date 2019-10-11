@@ -98,8 +98,12 @@ def processing_ouput():
     model_path = os.path.join(base.BASE_DIR, 'recommender_system_api/models/')
     vendor_cosine_sim = pickle.load(open(os.path.join(model_path, 'vendor_cosine_sim.pickle'), 'rb'))
     vendor_id_arr = pickle.load(open(os.path.join(model_path, 'vendor_id.pickle'), 'rb'))
-    neural_net_model = load_model(os.path.join(model_path, 'vendor_neural_net.h5'))
+    # neural_net_model = load_model(os.path.join(model_path, 'vendor_neural_net.h5'))
     rating_df = pd.read_feather(os.path.join(model_path, 'rating_df.feather'))
+    neural_net = NeuralNetwork(rating_df, n_latent_factors=20)
+    neural_net_model = neural_net.model()
+    weights = pickle.load(open(os.path.join(model_path, 'weights.pickle'), 'rb'))
+    neural_net_model.set_weights(weights)
 
     return vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model
 
@@ -120,7 +124,7 @@ def get_and_process_data():
     train_df, test_df = train_test_split(rating_df, test_size=0.2, shuffle=True)
 
     vendor_content_based = VendorContentBased(vendor_df=vendor_df, coupon_df=coupon_df, rating_df=rating_df)
-    neural_net = NeuralNetwork(rating_df, train_df, n_latent_factors=20)
+    neural_net = NeuralNetwork(rating_df, n_latent_factors=20)
 
     processed_vendor = vendor_content_based.vendor_processing()
     processed_coupon = vendor_content_based.coupon_processing()
@@ -138,8 +142,13 @@ def get_and_process_data():
                 protocol=pickle.HIGHEST_PROTOCOL)
 
     rating_df.to_feather(os.path.join(model_path, 'rating_df.feather'))
-    neural_net_model = neural_net.model(file_path=model_path)
-    neural_net_model.save(os.path.join(model_path, 'vendor_neural_net.h5'))
+
+    neural_net_model = neural_net.model()
+    neural_net_model = neural_net.train(model_path, neural_net_model)
+    weights = neural_net_model.get_weights()
+    pickle.dump(weights, open(os.path.join(model_path, 'weights.pickle'), 'wb'),
+                protocol=pickle.HIGHEST_PROTOCOL)
+    # neural_net_model.save(os.path.join(model_path, 'vendor_neural_net.h5'))
 
     score_mean, score_absolute = neural_net_evaluation(neural_net_model, test_df)
     print("=" * 100)

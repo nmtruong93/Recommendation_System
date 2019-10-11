@@ -942,3 +942,9 @@ INFO 10/Oct/2019 09:44:24 autoreload [django.utils.autoreload:trigger_reload:217
 INFO 10/Oct/2019 09:44:25 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
 INFO 10/Oct/2019 09:44:40 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 200 364
 INFO 10/Oct/2019 09:44:43 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 200 364
+INFO 10/Oct/2019 12:32:47 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 12:33:17 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 12:50:03 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 12:50:32 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 10/Oct/2019 12:50:41 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 200 364
+INFO 10/Oct/2019 12:50:49 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 200 3729

@@ -9,11 +9,15 @@ https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/
 
 import os
 import sys
+import site
+
+site.addsitedir('/home/ubuntu/.virtualenv/recommender_system_api/lib/python3.6/site-packages')
+
+# Add the app's directory to the PYTHONPATH
+sys.path.append('/home/ubuntu/projects/recommender_system_api')
+sys.path.append('/home/ubuntu/projects/recommender_system_api/recommender_system_api')
 
 from django.core.wsgi import get_wsgi_application
-
-app_path = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir))
-sys.path.append(os.path.join(app_path, 'recommender_system_api'))
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.prod")
 

@@ -1431,3 +1431,6 @@ INFO 14/Oct/2019 04:01:33 autoreload [django.utils.autoreload:run_with_reloader:
 INFO 14/Oct/2019 04:01:43 basehttp [django.server:log_message:154] "GET /api/recommended_for_you/ HTTP/1.1" 200 3729
 INFO 14/Oct/2019 04:03:05 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
 INFO 14/Oct/2019 04:03:06 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 08:44:21 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 08:50:30 autoreload [django.utils.autoreload:trigger_reload:217] /Users/welcome/Developments/repos/recommender_system_api/config/settings/dev.py changed, reloading.
+INFO 14/Oct/2019 08:50:31 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader

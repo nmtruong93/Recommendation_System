@@ -14,7 +14,7 @@ cosine_similarity, coupon_indices = load_coupon_models()
 
 @api_view(['GET'])
 @renderer_classes([JSONRenderer])
-def get_recommended_for_you(request, user_id=8306, gender=1, new_user=False, has_reviewed=False):
+def get_recommended_for_you(request):
     """
 
     :param request:
@@ -24,10 +24,18 @@ def get_recommended_for_you(request, user_id=8306, gender=1, new_user=False, has
     :param has_reviewed:
     :return:
     """
-    recommendation = recommended_for_you(user_id, gender, vendor_id_arr, rating_df,
-                                              vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
+    recommendation = []
+    try:
+        account_id = int(request.GET.get("account_id", 0))
+        gender = int(request.GET.get("account_id", 0))
+        new_user = False
+        has_reviewed = False
+        recommendation = recommended_for_you(account_id, gender, vendor_id_arr, rating_df,
+                                             vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
+    except Exception as e:
+        print(str(e))
 
-    return Response({'vendor_recommendation': recommendation})
+    return Response({'recommended_for_you': recommendation})
 
 
 @api_view(['GET', 'POST'])
@@ -49,13 +57,19 @@ def get_custom_page_recommendations(request, user_id=7973, gender=2, vendor_id=5
 
 @api_view(['GET'])
 @renderer_classes([JSONRenderer])
-def get_coupons_for_you(request, coupon_id=16):
+def get_coupons_for_you(request):
     """
 
     :param request:
     :param coupon_id:
     :return:
     """
-    recommendation = cb_coupon_recommendations(coupon_id, coupon_indices, cosine_similarity)
+
+    recommendation = []
+    try:
+        coupon_id = int(request.GET.get("coupon_id", 0))
+        recommendation = cb_coupon_recommendations(coupon_id, coupon_indices, cosine_similarity)
+    except Exception as e:
+        print(str(e))
 
     return Response({'coupons_for_you': recommendation})

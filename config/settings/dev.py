@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.join(ROOT_DIR(), 'recommender_system_api'))
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'recsys.tee-coin.com'
+    'recsys-dev.tee-coin.com'
 ]
 
 DATABASES = {

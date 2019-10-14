@@ -36,9 +36,9 @@ def recommended_for_you(user_id, gender, vendor_id_arr, rating_df, vendor_cosine
     if new_user:
         vendor_recommendation = []
         # TODO: popularity, MR.SON will create a flag to know whether a new user?
-    elif has_reviewed: # Users did not have review, but old user (have searched, clicked....)
-        vendor_recommendation = []
-        # TODO: Will use implicit data to recommendation.
+    # elif has_reviewed: # Users did not have review, but old user (have searched, clicked....)
+    #     vendor_recommendation = []
+    #     # TODO: Will use implicit data to recommendation.
     else:
 
         # vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model = processing_ouput()
@@ -72,8 +72,6 @@ def specific_recommendation(user_id, gender, vendor_id, vendor_id_arr, rating_df
     :return:
     """
 
-    # vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model = processing_ouput()
-
     if user_id not in rating_df.user_id.unique():
         vendor_recommendation = build_user_profile_cb(user_id, vendor_id_arr, cosine_sim=vendor_cosine_sim,
                                                       rating_df=rating_df, vendor_id=vendor_id)
@@ -90,7 +88,7 @@ def specific_recommendation(user_id, gender, vendor_id, vendor_id_arr, rating_df
     return vendor_recommendation
 
 
-def processing_ouput():
+def load_vendor_models():
     """
     Get the results from all previous processing
     :return:
@@ -103,8 +101,8 @@ def processing_ouput():
     return vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model
 
 
-def get_and_process_data():
-    print("Start")
+def retrain_vendor_models():
+
     stopwords_path = os.path.join(base.BASE_DIR, 'recommender_system_api/utils/')
     model_path = os.path.join(base.BASE_DIR, 'recommender_system_api/models/')
 
@@ -147,8 +145,6 @@ def get_and_process_data():
     print("=" * 100)
     print("Score mean", score_mean, "Score absolute", score_absolute)
 
-    return vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model
-
 
 def neural_net_evaluation(model, test_df):
     actual = test_df.rating.to_numpy()
@@ -160,6 +156,3 @@ def neural_net_evaluation(model, test_df):
     score_mean = mean_squared_error(actual, predictions)
     score_absolute = mean_absolute_error(actual, predictions)
     return score_mean, score_absolute
-
-if __name__ == '__main__':
-    get_and_process_data()

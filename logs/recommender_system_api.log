@@ -1366,3 +1366,68 @@ INFO 11/Oct/2019 10:54:47 autoreload [django.utils.autoreload:trigger_reload:217
 INFO 11/Oct/2019 10:54:48 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
 INFO 11/Oct/2019 10:54:56 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 200 364
 INFO 11/Oct/2019 10:55:16 basehttp [django.server:log_message:154] "GET /recommendation/main/ HTTP/1.1" 200 3729
+INFO 14/Oct/2019 03:34:36 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 03:41:23 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 03:43:13 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 03:44:16 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+WARNING 14/Oct/2019 03:44:46 log [django.request:log_response:228] Not Found: /recommendation/custom/
+WARNING 14/Oct/2019 03:44:46 basehttp [django.server:log_message:154] "GET /recommendation/custom/ HTTP/1.1" 404 77
+INFO 14/Oct/2019 03:45:08 basehttp [django.server:log_message:154] "GET /api/coupons_for_you HTTP/1.1" 301 0
+ERROR 14/Oct/2019 03:45:08 log [django.request:log_response:228] Internal Server Error: /api/coupons_for_you/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 59, in get_coupons_for_you
+    recommendation = cb_coupon_recommendations(coupon_id, coupon_indices, cosine_similarity)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/coupons/coupons_recommendations.py", line 21, in cb_coupon_recommendations
+    idx = coupon_indices[coupon_indices == coupon_id].index[0]
+  File "/Users/teecoin/PycharmProjects/recommender_env/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 4280, in __getitem__
+    return getitem(key)
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 14/Oct/2019 03:45:08 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 500 27
+WARNING 14/Oct/2019 03:45:08 log [django.request:log_response:228] Not Found: /favicon.ico
+WARNING 14/Oct/2019 03:45:08 basehttp [django.server:log_message:154] "GET /favicon.ico HTTP/1.1" 404 77
+INFO 14/Oct/2019 03:46:36 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/coupons/coupons_recommendations.py changed, reloading.
+INFO 14/Oct/2019 03:46:37 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 03:46:56 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/coupons/coupons_recommendations.py changed, reloading.
+INFO 14/Oct/2019 03:46:57 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 03:47:06 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 03:52:40 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 22
+INFO 14/Oct/2019 03:52:54 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 22
+INFO 14/Oct/2019 03:53:47 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 03:53:56 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 1246
+INFO 14/Oct/2019 03:54:52 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/coupons/coupons_recommendations.py changed, reloading.
+INFO 14/Oct/2019 03:54:53 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 03:55:03 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/coupons/coupons_recommendations.py changed, reloading.
+INFO 14/Oct/2019 03:55:04 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 03:55:15 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+WARNING 14/Oct/2019 03:55:48 log [django.request:log_response:228] Not Found: /api/recommend_for_you/
+WARNING 14/Oct/2019 03:55:48 basehttp [django.server:log_message:154] "GET /api/recommend_for_you/ HTTP/1.1" 404 77
+INFO 14/Oct/2019 03:56:21 basehttp [django.server:log_message:154] "GET /api/recommended_for_you/ HTTP/1.1" 200 3729
+INFO 14/Oct/2019 03:56:55 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 04:00:24 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 04:00:37 basehttp [django.server:log_message:154] "GET /api/recommended_for_you/ HTTP/1.1" 200 3729
+INFO 14/Oct/2019 04:01:05 basehttp [django.server:log_message:154] "GET /api/recommended_for_you/ HTTP/1.1" 200 3729
+INFO 14/Oct/2019 04:01:12 basehttp [django.server:log_message:154] "GET /api/recommended_for_you/ HTTP/1.1" 200 3729
+INFO 14/Oct/2019 04:01:33 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 14/Oct/2019 04:01:43 basehttp [django.server:log_message:154] "GET /api/recommended_for_you/ HTTP/1.1" 200 3729
+INFO 14/Oct/2019 04:03:05 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py changed, reloading.
+INFO 14/Oct/2019 04:03:06 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader

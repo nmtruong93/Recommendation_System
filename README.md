@@ -15,7 +15,8 @@ python manage_dev.py runserver 0.0.0.0:8000
 
 Cron job
 ------------
-python manage_dev.py runcrons "recommender_system_api.api.tasks.LoadModelsCronJob" --force
+*python manage_dev.py retrain_vedor_models* for retraining vendor models
+*python manage_dev.py retrain_coupon_models* for retraining coupon models
 
 [Cronjob_Django](https://blog.khophi.co/django-management-commands-via-cron/)
 [Cronjob_Mac](https://ole.michelsen.dk/blog/schedule-jobs-with-crontab-on-mac-osx.html)
@@ -26,6 +27,7 @@ python manage_dev.py runcrons "recommender_system_api.api.tasks.LoadModelsCronJo
 3. Save it and wait
 
 **Note**: Change your directory path in *retrain_model.sh* and *crontab*
+
 Acknowledgements
 ----------------
 

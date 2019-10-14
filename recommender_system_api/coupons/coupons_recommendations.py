@@ -28,6 +28,7 @@ def cb_coupon_recommendations(coupon_id, coupon_indices_list, cosine_sim):
         score_indices = score_series.index
 
         coupon_recommendations = [coupon_indices_list[i] for i in score_indices]
+        coupon_recommendations.remove(coupon_id)
 
     return coupon_recommendations
 

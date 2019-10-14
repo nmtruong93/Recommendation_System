@@ -24,7 +24,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 CACHE_TTL = getattr(base, 'CACHE_TTL', DEFAULT_TIMEOUT)
 
 
-def main_page_recommendation(user_id, gender, vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model, new_user=False, has_reviewed=False):
+def recommended_for_you(user_id, gender, vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model, new_user=False, has_reviewed=False):
     """
     Show recommendation list when open app. This not based on specific item.
     :param gender: gender of the user

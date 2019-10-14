@@ -1,7 +1,7 @@
 from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, renderer_classes
-from ..vendors.vendor_hybrid_recommendation import main_page_recommendation, specific_recommendation
+from ..vendors.vendor_hybrid_recommendation import recommended_for_you, specific_recommendation
 from ..vendors.vendor_hybrid_recommendation import processing_ouput, get_and_process_data
 import logging
 
@@ -11,9 +11,10 @@ logger = logging.getLogger(__name__)
 # TODO: Set as key of REDIS,
 vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model = processing_ouput()
 
-@api_view(['GET', 'POST'])
+
+@api_view(['GET'])
 @renderer_classes([JSONRenderer])
-def get_main_page_recommendations(request, user_id=7973, gender=2, new_user=False, has_reviewed=False):
+def get_recommended_for_you(request, user_id=7973, gender=2, new_user=False, has_reviewed=False):
     """
 
     :param request:
@@ -23,7 +24,7 @@ def get_main_page_recommendations(request, user_id=7973, gender=2, new_user=Fals
     :param has_reviewed:
     :return:
     """
-    recommendation = main_page_recommendation(user_id, gender, vendor_id_arr, rating_df,
+    recommendation = recommended_for_you(user_id, gender, vendor_id_arr, rating_df,
                                               vendor_cosine_sim, neural_net_model, new_user, has_reviewed)
 
     return Response({'vendor_recommendation': recommendation})
@@ -44,6 +45,23 @@ def get_custom_page_recommendations(request, user_id=7973, gender=2, vendor_id=5
                                              vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model)
 
     return Response({'vendor_recommendation': recommendation})
+
+
+@api_view(['GET'])
+@renderer_classes([JSONRenderer])
+def get_coupons_for_you(request, user_id=7973, gender=2, vendor_id=56507):
+    """
+
+    :param request:
+    :param user_id:
+    :param gender:
+    :param vendor_id:
+    :return:
+    """
+    recommendation = specific_recommendation(user_id, gender, vendor_id,
+                                             vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model)
+
+    return Response({'coupons_for_you': recommendation})
 
 
 def update_model():

@@ -18,5 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^recommendation/', include('recommender_system_api.api.urls')),
+    url(r'^api/', include('recommender_system_api.api.urls')),
 ]

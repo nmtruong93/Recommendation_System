@@ -10,7 +10,7 @@ GET_COUPON = "SELECT DISTINCT c.id AS coupon_id, cc.name AS coupon_name, cc.desc
      LEFT JOIN settings_searchtags sst ON cct.search_tag_id = sst.id \
      INNER JOIN coupons_cataloguecoupon c on cc.id = c.coupon_id \
     LEFT JOIN vendors_vendorlocation vv3 on v.id = vv3.vendor_id \
-WHERE NOW() BETWEEN c.start AND c.end AND v.email NOT LIKE '%tee-coin%' " \
+WHERE NOW() BETWEEN c.start AND c.end AND c.status='2' AND v.email NOT LIKE '%tee-coin%' " \
                                       "AND v.parent_id IS NULL AND cc.id NOT IN (6, 7) ORDER BY coupon_id"
 
 GET_VENDOR_RATING = "SELECT DISTINCT cc.vendor_id, cc.rating, cc.author_id AS user_id, gender, " \
@@ -32,14 +32,18 @@ GET_VENDOR_CONTENT = "SELECT DISTINCT v.id AS vendor_id, v.name AS vendor_name, 
                      "LEFT JOIN settings_searchtags ss ON vv2.search_tag_id = ss.id " \
                      "LEFT JOIN vendors_vendorlocation vv3 on v.id = vv3.vendor_id " \
                      "INNER JOIN coupons_coupon cc ON v.id = cc.vendor_id " \
-                     "WHERE v.email NOT LIKE '%tee-coin%' AND v.parent_id IS NULL and cc.id NOT IN (6, 7) ORDER BY vendor_id"
+                     "INNER JOIN coupons_cataloguecoupon c ON cc.id = c.coupon_id " \
+                     "WHERE NOW() BETWEEN c.start AND c.end AND c.status='2' AND v.email NOT LIKE '%tee-coin%' " \
+                     "AND v.parent_id IS NULL and cc.id NOT IN (6, 7) ORDER BY vendor_id"
 
 GET_COUPON_CONTENT = "SELECT DISTINCT vd.id AS vendor_id, cc.name AS coupon_name," \
                      "cc.description AS coupon_description, sst.name AS coupon_searchtags FROM vendors_vendor vd " \
                      "LEFT JOIN coupons_coupon cc ON vd.id = cc.vendor_id " \
                      "LEFT JOIN coupons_coupontags cct ON cc.id = cct.coupon_id " \
-                     "LEFT JOIN settings_searchtags sst ON cct.search_tag_id = sst.id " \
-                     "WHERE vd.email NOT LIKE '%tee-coin%' AND vd.parent_id IS NULL AND cc.id NOT IN (6, 7) ORDER BY vendor_id"
+                     "LEFT JOIN settings_searchtags sst ON cct.search_tag_id = sst.id  " \
+                     "INNER JOIN coupons_cataloguecoupon c on cc.id = c.coupon_id " \
+                     "WHERE NOW() BETWEEN c.start AND c.end AND c.status='2'AND vd.email NOT LIKE '%tee-coin%' " \
+                     "AND vd.parent_id IS NULL AND cc.id NOT IN (6, 7) ORDER BY vendor_id"
 
 GET_USER_PUBLIC_KEY = "SELECT public_key FROM accounts_account WHERE id={}"
 

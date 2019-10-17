@@ -29,7 +29,9 @@ def coupon_processing(coupon_df, stopwords_path):
 
     vd_search_tags = coupon_df[['coupon_id', 'vendor_searchtags']].drop_duplicates().groupby('coupon_id').agg(' '.join)
 
-    join_df = [coupon, cp_search_tags, vendor, category_des, vd_search_tags]
+    vd_address = coupon_df[['coupon_id', 'address']].drop_duplicates().groupby('coupon_id').agg(' '.join)
+
+    join_df = [coupon, cp_search_tags, vendor, category_des, vd_search_tags, vd_address]
     coupon_df = pd.concat(join_df, axis=1, join='inner')
 
     coupon = words_processing(coupon_df, stopwords_path=stopwords_path)

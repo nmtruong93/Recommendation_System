@@ -18,11 +18,12 @@ GET_VENDOR_RATING = "SELECT DISTINCT cc.vendor_id, cc.rating, cc.author_id AS us
                     "INNER JOIN vendors_vendorlocation v on vv.id = v.vendor_id WHERE vv.email NOT LIKE '%tee-coin%'"
 
 GET_VENDOR_CONTENT = "SELECT DISTINCT v.id AS vendor_id, v.name AS vendor_name, v.description AS vendor_des, " \
-                     "vv.slug AS vendor_cate_name, vv.description AS vendor_cate_des, ss.name AS vendor_searchtags " \
+                     "vv.slug AS vendor_cate_name, vv.description AS vendor_cate_des, ss.name AS vendor_searchtags, vv3.address " \
                      "FROM vendors_vendor v LEFT JOIN vendors_vendor_categories vvc ON v.id = vvc.vendor_id " \
                      "LEFT JOIN vendors_vendorcategory vv on vvc.vendorcategory_id = vv.id " \
                      "LEFT JOIN vendors_vendortagsearch vv2 on v.id = vv2.vendor_id " \
                      "LEFT JOIN settings_searchtags ss ON vv2.search_tag_id = ss.id " \
+                     "LEFT JOIN vendors_vendorlocation vv3 on v.id = vv3.vendor_id " \
                      "INNER JOIN coupons_coupon cc ON v.id = cc.vendor_id " \
                      "WHERE v.email NOT LIKE '%tee-coin%' AND v.parent_id IS NULL and cc.id NOT IN (6, 7) ORDER BY vendor_id"
 

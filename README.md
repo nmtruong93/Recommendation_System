@@ -32,6 +32,10 @@ Cron job
 
 **Note**: Change your directory path in **retrain_model.sh** and **crontab** file
 
+Tensorboard
+----------------
+Run `tensorboard --logdir ./logs`
+
 Acknowledgements
 ----------------
 

@@ -109,6 +109,8 @@ def retrain_vendor_models():
     vendor_df = get_data_by_pandas(query=queries.GET_VENDOR_CONTENT)
     coupon_df = get_data_by_pandas(query=queries.GET_COUPON_CONTENT)
     rating_df = get_data_by_pandas(query=queries.GET_VENDOR_RATING)
+    favorite_df = get_data_by_pandas(query=queries.GET_VENDOR_FAVORITE)
+    rating_df = pd.concat([rating_df, favorite_df])
 
     rating_df['gender'] = rating_df.gender.astype('int64')
     rating_df.dropna(inplace=True)

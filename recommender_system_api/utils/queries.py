@@ -1,6 +1,6 @@
 GET_COUPON = "SELECT DISTINCT c.id AS coupon_id, cc.name AS coupon_name, cc.description AS coupon_description, \
    sst.name AS coupon_searchtags, v.name AS vendor_name, v.description  AS vendor_des, vv.slug AS vendor_cate_name, \
-   vv.description AS vendor_cate_des, ss.name AS vendor_searchtags FROM vendors_vendor v \
+   vv.description AS vendor_cate_des, ss.name AS vendor_searchtags, vv3.address FROM vendors_vendor v \
      LEFT JOIN vendors_vendor_categories vvc ON v.id = vvc.vendor_id \
      LEFT JOIN vendors_vendorcategory vv on vvc.vendorcategory_id = vv.id \
      LEFT JOIN vendors_vendortagsearch vv2 on v.id = vv2.vendor_id \
@@ -9,6 +9,7 @@ GET_COUPON = "SELECT DISTINCT c.id AS coupon_id, cc.name AS coupon_name, cc.desc
      LEFT JOIN coupons_coupontags cct ON cc.id = cct.coupon_id \
      LEFT JOIN settings_searchtags sst ON cct.search_tag_id = sst.id \
      INNER JOIN coupons_cataloguecoupon c on cc.id = c.coupon_id \
+    LEFT JOIN vendors_vendorlocation vv3 on v.id = vv3.vendor_id \
 WHERE v.email NOT LIKE '%tee-coin%' AND v.parent_id IS NULL AND cc.id NOT IN (6, 7) ORDER BY coupon_id"
 
 GET_VENDOR_RATING = "SELECT DISTINCT cc.vendor_id, cc.rating, cc.author_id AS user_id, gender, " \

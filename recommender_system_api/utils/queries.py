@@ -10,7 +10,8 @@ GET_COUPON = "SELECT DISTINCT c.id AS coupon_id, cc.name AS coupon_name, cc.desc
      LEFT JOIN settings_searchtags sst ON cct.search_tag_id = sst.id \
      INNER JOIN coupons_cataloguecoupon c on cc.id = c.coupon_id \
     LEFT JOIN vendors_vendorlocation vv3 on v.id = vv3.vendor_id \
-WHERE v.email NOT LIKE '%tee-coin%' AND v.parent_id IS NULL AND cc.id NOT IN (6, 7) ORDER BY coupon_id"
+WHERE NOW() BETWEEN c.start AND c.end AND v.email NOT LIKE '%tee-coin%' " \
+                                      "AND v.parent_id IS NULL AND cc.id NOT IN (6, 7) ORDER BY coupon_id"
 
 GET_VENDOR_RATING = "SELECT DISTINCT cc.vendor_id, cc.rating, cc.author_id AS user_id, gender, " \
                     "v.country_id AS vd_country_id FROM comments_comment cc INNER JOIN  \

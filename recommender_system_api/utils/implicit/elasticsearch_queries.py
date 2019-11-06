@@ -13,6 +13,7 @@ def get_active_vendors():
               "range": {
                 "start": {
                   "lte": "now/s"
+
                 }
               }
             },
@@ -79,13 +80,42 @@ def get_vendor_detail_views(path):
     return query
 
 
-def get_coupon_detail_views():
+def get_coupon_detail_views(path):
     query = {
-      "regexp": {
-        "path": {
-          "value": "catalogues.*"
+      "_source": ["account", "path"],
+      "size": 100,
+      "query": {
+        "bool": {
+          "must": [
+            {
+              "query_string": {
+                "fields": ["path"],
+                "query": "catalogues/[0-9]{1,5}/"
+              }
+            }
+          ],
+          "filter": {
+            "terms": {
+              "path": path
+            }
+          }
         }
-      }
+      },
+      "aggs": {
+        "distinct_records": {
+          "terms": {
+            "field": "path.keyword",
+            "script": "[doc['account'].value, doc['path'].value]"
+          }
+        }
+      },
+      "sort": [
+        {
+          "timestamp": {
+            "order": "desc"
+          }
+        }
+      ]
     }
 
     return query

@@ -39,44 +39,45 @@ def average_roc_auc(match_model, train_data, test_data):
     :return:
     """
     max_user_id = max(train_data['account_id'].max(), test_data['account_id'].max())
-    max_vendor_id = max(train_data['vendor_id'].max(), test_data['vendor_id']. max())
+    max_item_id = max(train_data['item_id'].max(), test_data['item_id']. max())
     user_auc_scores = []
     for account_id in range(1, max_user_id + 1):
-        positive_vendor_train = train_data[train_data['account_id'] == account_id]
-        positive_vendor_test = test_data[test_data['account_id'] == account_id]
+        positive_item_train = train_data[train_data['account_id'] == account_id]
+        positive_item_test = test_data[test_data['account_id'] == account_id]
 
         # Consider all the items already seen in the training set
-        all_vendor_ids = np.arange(1, max_vendor_id + 1)
+        all_item_ids = np.arange(1, max_item_id + 1)
         # Return the items that are not in the training set
-        vendors_to_rank = np.setdiff1d(all_vendor_ids, positive_vendor_train['vendor_id'].to_numpy())
+        items_to_rank = np.setdiff1d(all_item_ids, positive_item_train['item_id'].to_numpy())
 
         # Ground truth: return 1 for each item positively present in the test set and 0 otherwise
-        expected = np.isin(vendors_to_rank, positive_vendor_test['vendor_id'].to_numpy())
+        expected = np.isin(items_to_rank, positive_item_test['item_id'].to_numpy())
 
         if np.sum(expected) >= 1:
             # At least on positive test value to rank
-            repeated_user_id = np.empty_like(vendors_to_rank)
+            repeated_user_id = np.empty_like(items_to_rank)
             repeated_user_id.fill(account_id)
 
-            predicted = match_model.predict([repeated_user_id, vendors_to_rank], batch_size=64)
+            predicted = match_model.predict([repeated_user_id, items_to_rank], batch_size=64)
 
             user_auc_scores.append(roc_auc_score(expected, predicted))
 
     return sum(user_auc_scores) / len(user_auc_scores)
 
 
-def sample_triplets(train_df, n_vendors, random_seed=0):
+def sample_triplets(train_df, n_items, random_seed=0):
     """
     Sample negatives at random
     :param train_df:
-    :param n_vendors:
+    :param n_items:
     :param random_seed:
     :return:
     """
     neg_random_state = np.random.RandomState(random_seed)
     user_ids = train_df['account_id'].values
-    positive_vendor_ids = train_df['vendor_id'].values
-    negative_vendor_ids = neg_random_state.choice(np.setdiff1d(np.arange(1, n_vendors), positive_vendor_ids),
+
+    positive_item_ids = train_df['item_id'].values
+    negative_item_ids = neg_random_state.choice(np.setdiff1d(np.arange(1, n_items), positive_item_ids),
                                                   size=len(user_ids))
 
-    return [user_ids, positive_vendor_ids, negative_vendor_ids]
+    return [user_ids, positive_item_ids, negative_item_ids]

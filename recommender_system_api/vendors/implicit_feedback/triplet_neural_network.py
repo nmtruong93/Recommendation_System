@@ -1,13 +1,7 @@
 from tensorflow.keras.models import Model, Sequential
 from tensorflow.keras.layers import Embedding, Flatten, Input, Dense, Dropout, Concatenate, Lambda
-from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint, TensorBoard
 from tensorflow.keras.regularizers import l2
-from recommender_system_api.vendors.implicit_feedback.evaluation import margin_comparator_loss, average_roc_auc, sample_triplets, \
-    identity_loss
-from recommender_system_api.vendors.implicit_feedback.processing import get_vendor_detail_views_data
-from sklearn.model_selection import train_test_split
-import os
-from config.settings.base import BASE_DIR
+from recommender_system_api.utils.implicit.implicit_evaluation import margin_comparator_loss
 
 
 def make_interaction_mlp(input_dim, n_hidden=1, hidden_size=64, dropout=0, l2_reg=None):
@@ -35,11 +29,11 @@ def make_interaction_mlp(input_dim, n_hidden=1, hidden_size=64, dropout=0, l2_re
     return mlp
 
 
-def build_models(n_users, n_vendors, user_dim=32, vendor_dim=64, n_hidden=1, hidden_size=64, dropout=0, l2_reg=0):
+def build_models(n_users, n_items, user_dim=32, vendor_dim=64, n_hidden=1, hidden_size=64, dropout=0, l2_reg=0):
     """
     Build models to train a deep triplet network
     :param n_users:
-    :param n_vendors:
+    :param n_items:
     :param user_dim:
     :param vendor_dim:
     :param n_hidden:
@@ -56,7 +50,7 @@ def build_models(n_users, n_vendors, user_dim=32, vendor_dim=64, n_hidden=1, hid
     user_layer = Embedding(n_users, user_dim, input_length=1, name='user_embedding', embeddings_regularizer=l2_reg)
 
     # The following embedding parameters will be shared to encode both the positive and negative items
-    item_layer = Embedding(n_vendors, vendor_dim, input_length=1, name='item_embedding', embeddings_regularizer=l2_reg)
+    item_layer = Embedding(n_items, vendor_dim, input_length=1, name='item_embedding', embeddings_regularizer=l2_reg)
 
     user_embedding = Flatten()(user_layer(user_input))
     positive_item_embedding = Flatten()(item_layer(positive_item_input))

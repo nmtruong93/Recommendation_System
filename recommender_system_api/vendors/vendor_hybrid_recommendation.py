@@ -4,15 +4,15 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error
 from recommender_system_api.utils.connections import get_data_by_pandas
 from recommender_system_api.utils import queries
 from recommender_system_api.utils.words_processing import tfidf
-from recommender_system_api.vendors.explicit_feedback.neural_network import create_model, train_model, plot_loss_curve
-from recommender_system_api.vendors.explicit_feedback.vendor_content_based_filtering import vendor_processing, coupon_processing, vendor_coupon_processing
+from recommender_system_api.vendors.neural_network import create_model, train_model, plot_loss_curve
+from recommender_system_api.vendors.vendor_content_based_filtering import vendor_processing, coupon_processing, vendor_coupon_processing
 import pickle
 from tensorflow.keras.models import load_model
 import os
 import pandas as pd
 import numpy as np
 from config.settings import base
-from recommender_system_api.vendors.explicit_feedback.user_profiles import build_user_profile_cb, build_user_profile_nn
+from recommender_system_api.vendors.user_profiles import build_user_profile_cb, build_user_profile_nn
 from django.core.cache.backends.base import DEFAULT_TIMEOUT
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 

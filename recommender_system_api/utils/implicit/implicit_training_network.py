@@ -1,6 +1,6 @@
 from recommender_system_api.utils.implicit.implicit_processing import get_item_detail_views_data
 from sklearn.model_selection import train_test_split
-from recommender_system_api.vendors.implicit_feedback.triplet_neural_network import build_models
+from recommender_system_api.utils.implicit.triplet_neural_network import build_models
 from recommender_system_api.utils.implicit.implicit_evaluation import identity_loss, sample_triplets, average_roc_auc
 from config.settings.base import BASE_DIR
 import os

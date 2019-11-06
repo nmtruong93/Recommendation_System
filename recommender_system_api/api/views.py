@@ -1,8 +1,8 @@
 from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, renderer_classes
-from recommender_system_api.vendors.explicit_feedback.vendor_hybrid_recommendation import recommended_for_you, specific_recommendation
-from recommender_system_api.vendors.explicit_feedback.vendor_hybrid_recommendation import load_vendor_models
+from recommender_system_api.vendors.vendor_hybrid_recommendation import recommended_for_you, specific_recommendation
+from recommender_system_api.vendors.vendor_hybrid_recommendation import load_vendor_models
 import logging
 from ..coupons.coupons_recommendations import cb_coupon_recommendations, load_coupon_models
 # Get an instance of a logger

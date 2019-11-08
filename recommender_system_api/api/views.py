@@ -27,7 +27,7 @@ def get_recommended_for_you(request):
     recommendation = []
     try:
         account_id = int(request.GET.get("account_id", 0))
-        gender = int(request.GET.get("account_id", 0))
+        gender = int(request.GET.get("gender", 0))
         new_user = False
         has_reviewed = False
         recommendation = recommended_for_you(account_id, gender, vendor_id_arr, rating_df,

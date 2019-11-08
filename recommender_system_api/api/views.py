@@ -67,7 +67,7 @@ def get_coupons_for_you(request):
 
     recommendation = []
     try:
-        coupon_id = int(request.GET.get("coupon_id", 0))
+        coupon_id = int(request.GET.get("coupon_id", 7))
         recommendation = cb_coupon_recommendations(coupon_id, coupon_indices, cosine_similarity)
     except Exception as e:
         print(str(e))

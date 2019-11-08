@@ -1,6 +1,6 @@
 # coding=utf-8
 from django.urls import path
-from . import views
+from recommender_system_api.api import views
 
 urlpatterns = [
     path('recommended_for_you/', views.get_recommended_for_you,

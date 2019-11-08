@@ -4,7 +4,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error
 from recommender_system_api.utils.connections import get_data_by_pandas
 from recommender_system_api.utils import queries
 from recommender_system_api.utils.words_processing import tfidf
-from recommender_system_api.vendors.neural_network import create_model, train_model, plot_loss_curve
+from recommender_system_api.vendors.neural_network import create_model, train_model
 from recommender_system_api.vendors.vendor_content_based_filtering import vendor_processing, coupon_processing, vendor_coupon_processing
 import pickle
 from tensorflow.keras.models import model_from_json, load_model
@@ -124,7 +124,6 @@ def retrain_vendor_models():
 
     model = create_model(params=params)
     neural_net_model, history = train_model(x_train=x_train, y_train=y_train, model_path=model_path, model=model)
-    plot_loss_curve(history, model_path)
     neural_net_model.save(os.path.join(model_path, 'vendor_neural_net.h5'))
 
     score_mean, score_absolute = neural_net_evaluation(neural_net_model, test_df)

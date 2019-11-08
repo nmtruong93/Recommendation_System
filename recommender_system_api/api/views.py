@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view, renderer_classes
 from ..vendors.vendor_hybrid_recommendation import recommended_for_you, specific_recommendation
 from ..vendors.vendor_hybrid_recommendation import load_vendor_models
 import logging
-from ..coupons.coupons_recommendations import cb_coupon_recommendations, load_coupon_models
+from ..coupons.coupons_recommendations import cb_coupon_recommendations, load_coupon_models, retrain_coupon_models
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
@@ -67,7 +67,7 @@ def get_coupons_for_you(request):
 
     recommendation = []
     try:
-        coupon_id = int(request.GET.get("coupon_id", 0))
+        coupon_id = int(request.GET.get("coupon_id", 1))
         recommendation = cb_coupon_recommendations(coupon_id, coupon_indices, cosine_similarity)
     except Exception as e:
         print(str(e))

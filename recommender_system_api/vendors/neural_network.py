@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 from tensorflow.keras.layers import Input, Embedding, Flatten, Concatenate, Dense, BatchNormalization, Dropout
 from tensorflow.keras.models import Model
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint, TensorBoard
@@ -59,13 +58,3 @@ def train_model(x_train, y_train, model_path, model):
     history = model.fit(x=x_train, y=y_train, validation_split=0.2, epochs=100, verbose=1,
                         callbacks=[model_checkpoint, early_stopping, tensor_board])
     return model, history
-
-
-def plot_loss_curve(history, file_path):
-    file_path = os.path.join(file_path, 'training_loss.png')
-    plt.plot(history.history['loss'])
-    plt.plot(history.history['val_loss'])
-    plt.xlabel('Epochs')
-    plt.ylabel('Loss')
-    plt.legend()
-    plt.savefig(file_path)

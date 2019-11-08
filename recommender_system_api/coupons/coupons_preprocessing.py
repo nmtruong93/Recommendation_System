@@ -1,7 +1,7 @@
 import warnings
 import pandas as pd
 
-from ..utils.words_processing import words_processing
+from recommender_system_api.utils.explicit.words_processing import words_processing
 
 warnings.filterwarnings('ignore')
 

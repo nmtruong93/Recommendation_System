@@ -3,9 +3,9 @@ from config.settings import base
 import os
 import pickle
 from recommender_system_api.coupons.coupons_preprocessing import coupon_processing
-from recommender_system_api.utils.connections import get_data_by_pandas
-from recommender_system_api.utils.words_processing import tfidf, cosine_similar
-from recommender_system_api.utils import queries
+from recommender_system_api.utils.explicit.connections import get_data_by_pandas
+from recommender_system_api.utils.explicit.words_processing import tfidf, cosine_similar
+from recommender_system_api.utils.explicit import queries
 
 
 def cb_coupon_recommendations(coupon_id, coupon_indices_list, cosine_sim):
@@ -44,7 +44,7 @@ def load_coupon_models():
 
 
 def retrain_coupon_models():
-    stopwords_path = os.path.join(base.BASE_DIR, 'recommender_system_api/utils/')
+    stopwords_path = os.path.join(base.BASE_DIR, 'recommender_system_api/utils/explicit/')
     model_path = os.path.join(base.BASE_DIR, 'recommender_system_api/models/')
     coupon_df = get_data_by_pandas(query=queries.GET_COUPON)
     coupon = coupon_processing(coupon_df, stopwords_path=stopwords_path)

@@ -5,8 +5,13 @@ from recommender_system_api.vendors.vendor_hybrid_recommendation import recommen
 from recommender_system_api.vendors.vendor_hybrid_recommendation import load_vendor_models
 import logging
 from ..coupons.coupons_recommendations import cb_coupon_recommendations, load_coupon_models
+from recommender_system_api.utils.implicit.implicit_processing import get_full_data
+from recommender_system_api.utils.implicit.implicit_training_network import retrain_implicit_vendor_model
+
+retrain_implicit_vendor_model()
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
+df = get_full_data()
 
 # TODO: Set as key of REDIS,
 vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model = load_vendor_models()
@@ -67,7 +72,7 @@ def get_coupons_for_you(request):
 
     recommendation = []
     try:
-        coupon_id = int(request.GET.get("coupon_id", 7))
+        coupon_id = int(request.GET.get("coupon_id", 6))
         recommendation = cb_coupon_recommendations(coupon_id, coupon_indices, cosine_similarity)
     except Exception as e:
         print(str(e))

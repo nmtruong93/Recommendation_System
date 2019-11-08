@@ -1,9 +1,9 @@
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error
-from recommender_system_api.utils.connections import get_data_by_pandas
-from recommender_system_api.utils import queries
-from recommender_system_api.utils.words_processing import tfidf
+from recommender_system_api.utils.explicit.connections import get_data_by_pandas
+from recommender_system_api.utils.explicit import queries
+from recommender_system_api.utils.explicit.words_processing import tfidf
 from recommender_system_api.vendors.neural_network import create_model, train_model
 from recommender_system_api.vendors.vendor_content_based_filtering import vendor_processing, coupon_processing, vendor_coupon_processing
 import pickle
@@ -24,7 +24,8 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 CACHE_TTL = getattr(base, 'CACHE_TTL', DEFAULT_TIMEOUT)
 
 
-def recommended_for_you(user_id, gender, vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model, new_user=False, has_reviewed=False):
+def recommended_for_you(user_id, gender, vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model, triplet_model,
+                        implicit_vendor_df, new_user=False):
     """
     Show recommendation list when open app. This not based on specific item.
     :param gender: gender of the user
@@ -33,12 +34,9 @@ def recommended_for_you(user_id, gender, vendor_id_arr, rating_df, vendor_cosine
     :param has_reviewed: The user have reviewed?
     :return: Recommendation list
     """
-    if new_user:
+
+    if user_id in implicit_vendor_df.actual_account_id.unique():
         vendor_recommendation = []
-        # TODO: popularity, MR.SON will create a flag to know whether a new user?
-    # elif has_reviewed: # Users did not have review, but old user (have searched, clicked....)
-    #     vendor_recommendation = []
-    #     # TODO: Will use implicit data to recommendation.
     else:
 
         # vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model = processing_ouput()
@@ -103,7 +101,7 @@ def load_vendor_models():
 
 def retrain_vendor_models():
 
-    stopwords_path = os.path.join(base.BASE_DIR, 'recommender_system_api/utils/')
+    stopwords_path = os.path.join(base.BASE_DIR, 'recommender_system_api/utils/explicit/')
     model_path = os.path.join(base.BASE_DIR, 'recommender_system_api/models/')
 
     vendor_df = get_data_by_pandas(query=queries.GET_VENDOR_CONTENT)

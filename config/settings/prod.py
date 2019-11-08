@@ -28,3 +28,4 @@ DATABASES = {
 }
 
 DOMAIN_URL = 'https://api.tee-coin.com/v4'
+WSGI_APPLICATION = 'config.wsgi_dev.application'

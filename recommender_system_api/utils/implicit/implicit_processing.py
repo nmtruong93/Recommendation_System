@@ -2,6 +2,8 @@ from recommender_system_api.utils.implicit.elasticsearch_queries import get_acti
     get_coupon_detail_views
 from elasticsearch import Elasticsearch
 import pandas as pd
+from recommender_system_api.utils.explicit.connections import get_data_by_pandas
+from recommender_system_api.utils.explicit.queries import get_gender, get_vendor_location
 
 client = Elasticsearch(hosts='https://search-teecoin-api-2xmwd6wn4nrdew7euzgaowljpm.ap-southeast-1.es.amazonaws.com/', use_ssl=True, verify_certs=False, timeout=60)
 
@@ -30,3 +32,20 @@ def get_item_detail_views_data(vendor=True, vendor_index=3, coupon_index=4):
     implicit_df.drop_duplicates(inplace=True)
     implicit_df['actual_account_id'] = implicit_df.actual_account_id.astype('int64')
     return implicit_df
+
+
+def get_full_data(vendor=True):
+    implicit_df = get_item_detail_views_data(vendor)
+
+    account_ids = tuple(implicit_df.actual_account_id.unique())
+    gender_df = get_data_by_pandas(query=get_gender(account_ids))
+
+    item_ids = tuple(implicit_df.actual_item_id.unique())
+    item_location_df = get_data_by_pandas(query=get_vendor_location(item_ids))
+
+    data_df = implicit_df.merge(gender_df, on='actual_account_id', how='inner')\
+        .merge(item_location_df, on='actual_item_id', how='inner')
+
+    data_df['gender'] = data_df.gender.astype('int64')
+
+    return data_df

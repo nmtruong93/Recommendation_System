@@ -1,4 +1,4 @@
-from recommender_system_api.utils.words_processing import words_processing
+from recommender_system_api.utils.explicit.words_processing import words_processing
 import pandas as pd
 import warnings
 

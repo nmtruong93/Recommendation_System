@@ -44,3 +44,17 @@ GET_COUPON_CONTENT = "SELECT DISTINCT vd.id AS vendor_id, cc.name AS coupon_name
                      "INNER JOIN coupons_cataloguecoupon c on cc.id = c.coupon_id " \
                      "WHERE NOW() BETWEEN c.start AND c.end AND c.status='2'AND vd.email NOT LIKE '%nguyen.do.bao.anh@tee-coin.com%' " \
                      "AND vd.parent_id IS NULL AND cc.id NOT IN (6, 7) ORDER BY vendor_id"
+
+
+def get_gender(account_ids):
+
+    gender_query = "SELECT id AS actual_account_id, gender FROM accounts_account WHERE id IN {}".format(account_ids)
+
+    return gender_query
+
+
+def get_vendor_location(vendor_ids):
+
+    location_query = "SELECT vendor_id AS actual_item_id, country_id AS actual_item_country_id FROM vendors_vendorlocation WHERE vendor_id IN {}".format(vendor_ids)
+
+    return location_query

@@ -23,7 +23,6 @@ def build_user_profile_nn(user_id, gender, model, rating_df, vendor_id=None):
     return predicted_rating.set_index('vendor_id')
 
 
-# TODO: Improve performance of this function, consider remove vendor_df
 def build_user_profile_cb(user_id, vendor_id_arr, cosine_sim, rating_df, vendor_id=None):
     """
     Build user profile with rating prediction

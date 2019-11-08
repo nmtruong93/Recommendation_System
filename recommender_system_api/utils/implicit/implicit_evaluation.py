@@ -30,7 +30,7 @@ def margin_comparator_loss(inputs, margin=1.0):
     return tf.maximum(negative_pair_sim - positive_pair_sim + margin, 0)
 
 
-def average_roc_auc(match_model, train_data, test_data):
+def average_roc_auc(match_model, train_data, test_data, dataset_df):
     """
     Compute the ROC AUC for each user and average over users
     :param match_model:
@@ -42,6 +42,9 @@ def average_roc_auc(match_model, train_data, test_data):
     max_item_id = max(train_data['item_id'].max(), test_data['item_id']. max())
     user_auc_scores = []
     for account_id in range(1, max_user_id + 1):
+        # Gender corresponding account_id
+        gender = dataset_df.loc[dataset_df.account_id == account_id].gender.values[0]
+
         positive_item_train = train_data[train_data['account_id'] == account_id]
         positive_item_test = test_data[test_data['account_id'] == account_id]
 
@@ -49,6 +52,11 @@ def average_roc_auc(match_model, train_data, test_data):
         all_item_ids = np.arange(1, max_item_id + 1)
         # Return the items that are not in the training set
         items_to_rank = np.setdiff1d(all_item_ids, positive_item_train['item_id'].to_numpy())
+        item_country_ids = []
+        for i in items_to_rank:
+            item_country_id = dataset_df.loc[dataset_df.item_id == i].item_country_id.values[0]
+            item_country_ids.append(item_country_id)
+        item_country_ids = np.array(item_country_ids)
 
         # Ground truth: return 1 for each item positively present in the test set and 0 otherwise
         expected = np.isin(items_to_rank, positive_item_test['item_id'].to_numpy())
@@ -58,14 +66,18 @@ def average_roc_auc(match_model, train_data, test_data):
             repeated_user_id = np.empty_like(items_to_rank)
             repeated_user_id.fill(account_id)
 
-            predicted = match_model.predict([repeated_user_id, items_to_rank], batch_size=64)
+            repeated_gender = np.empty_like(items_to_rank)
+            repeated_gender.fill(gender)
+
+            predicted = match_model.predict([repeated_user_id, repeated_gender, items_to_rank, item_country_ids],
+                                            batch_size=64)
 
             user_auc_scores.append(roc_auc_score(expected, predicted))
 
     return sum(user_auc_scores) / len(user_auc_scores)
 
 
-def sample_triplets(train_df, n_items, random_seed=0):
+def sample_triplets(train_df, n_items, dataset_df, random_seed=0):
     """
     Sample negatives at random
     :param train_df:
@@ -74,10 +86,17 @@ def sample_triplets(train_df, n_items, random_seed=0):
     :return:
     """
     neg_random_state = np.random.RandomState(random_seed)
-    user_ids = train_df['account_id'].values
+    user_ids = train_df['account_id'].to_numpy()
+    gender = train_df['gender'].to_numpy()
+    positive_item_ids = train_df['item_id'].to_numpy()
+    positive_item_country_id = train_df['item_country_id'].to_numpy()
 
-    positive_item_ids = train_df['item_id'].values
     negative_item_ids = neg_random_state.choice(np.setdiff1d(np.arange(1, n_items), positive_item_ids),
                                                   size=len(user_ids))
+    negative_item_country_ids = []
+    for i in negative_item_ids:
+        item_country_id = dataset_df.loc[dataset_df.item_id == i].item_country_id.values[0]
+        negative_item_country_ids.append(item_country_id)
 
-    return [user_ids, positive_item_ids, negative_item_ids]
+    negative_item_country_ids = np.array(negative_item_country_ids)
+    return [user_ids, gender, positive_item_ids, negative_item_ids, positive_item_country_id, negative_item_country_ids]

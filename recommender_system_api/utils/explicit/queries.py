@@ -53,8 +53,18 @@ def get_gender(account_ids):
     return gender_query
 
 
-def get_vendor_location(vendor_ids):
+def get_vendor_loc_based_on_vendor_ids(vendor_ids):
 
     location_query = "SELECT vendor_id AS actual_item_id, country_id AS actual_item_country_id FROM vendors_vendorlocation WHERE vendor_id IN {}".format(vendor_ids)
+
+    return location_query
+
+
+def get_vendor_loc_based_on_cata_coupon_ids(cata_coupon_ids):
+
+    location_query = "SELECT DISTINCT cc.id AS actual_item_id, country_id AS actual_item_country_id " \
+                     "FROM coupons_cataloguecoupon cc INNER JOIN coupons_coupon c on cc.coupon_id = c.id " \
+                     "INNER JOIN vendors_vendor vv on c.vendor_id = vv.id " \
+                     "INNER JOIN vendors_vendorlocation v on vv.id = v.vendor_id WHERE cc.id IN {}".format(cata_coupon_ids)
 
     return location_query

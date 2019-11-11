@@ -3,7 +3,8 @@ from recommender_system_api.utils.implicit.elasticsearch_queries import get_acti
 from elasticsearch import Elasticsearch
 import pandas as pd
 from recommender_system_api.utils.explicit.connections import get_data_by_pandas
-from recommender_system_api.utils.explicit.queries import get_gender, get_vendor_location
+from recommender_system_api.utils.explicit.queries import get_gender, get_vendor_loc_based_on_vendor_ids, \
+    get_vendor_loc_based_on_cata_coupon_ids
 
 client = Elasticsearch(hosts='https://search-teecoin-api-2xmwd6wn4nrdew7euzgaowljpm.ap-southeast-1.es.amazonaws.com/', use_ssl=True, verify_certs=False, timeout=60)
 
@@ -41,7 +42,10 @@ def get_full_data(vendor=True):
     gender_df = get_data_by_pandas(query=get_gender(account_ids))
 
     item_ids = tuple(implicit_df.actual_item_id.unique())
-    item_location_df = get_data_by_pandas(query=get_vendor_location(item_ids))
+    if vendor:
+        item_location_df = get_data_by_pandas(query=get_vendor_loc_based_on_vendor_ids(item_ids))
+    else:
+        item_location_df = get_data_by_pandas(query=get_vendor_loc_based_on_cata_coupon_ids(item_ids))
 
     data_df = implicit_df.merge(gender_df, on='actual_account_id', how='inner')\
         .merge(item_location_df, on='actual_item_id', how='inner')

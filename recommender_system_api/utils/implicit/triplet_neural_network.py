@@ -1,7 +1,7 @@
 from tensorflow.keras.models import Model, Sequential
 from tensorflow.keras.layers import Embedding, Flatten, Input, Dense, Dropout, Concatenate, Lambda
 from tensorflow.keras.regularizers import l2
-from recommender_system_api.utils.implicit.implicit_evaluation import margin_comparator_loss
+from recommender_system_api.utils.implicit.evaluation_implicit import margin_comparator_loss
 
 
 def make_interaction_mlp(input_dim, n_hidden=1, hidden_size=64, dropout=0, l2_reg=None):

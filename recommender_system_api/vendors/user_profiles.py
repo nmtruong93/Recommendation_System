@@ -6,16 +6,15 @@ def build_user_profile_nn(user_id, gender, model, rating_df, vendor_id=None):
     if vendor_id: # Using list of vendor_id from content-based as input neural network
         vendor_id_country_id = rating_df[rating_df.vendor_id.isin(vendor_id)][['vendor_id', 'vd_country_id']]\
             .drop_duplicates().to_numpy()
-        vendor_id = vendor_id_country_id[:, 0]
-        vd_country_id = vendor_id_country_id[:, 1]
     else:
         vendor_id_country_id = rating_df[['vendor_id', 'vd_country_id']].drop_duplicates().to_numpy()
-        vendor_id = vendor_id_country_id[:, 0] # Recommend on the home page
-        vd_country_id = vendor_id_country_id[:, 1]
 
-    user_id = rating_df[rating_df.user_id == user_id].user_id.iloc[0]
-    user_id = np.array([user_id for i in range(len(vendor_id))])
-    gender = np.array([gender for i in range(len(vendor_id))])
+    vendor_id = vendor_id_country_id[:, 0]  # Recommend on the home page
+    vd_country_id = vendor_id_country_id[:, 1]
+
+    user_id = np.full_like(vendor_id, user_id)
+    gender = np.full_like(vendor_id, gender)
+
     predictions = model.predict([user_id, gender, vendor_id, vd_country_id])
     predictions = np.array([a[0] for a in predictions])
     predicted_rating = pd.DataFrame({'vendor_id': vendor_id, 'neural_net_rating': predictions})

@@ -1,10 +1,8 @@
 from tensorflow.keras.models import Model, Sequential
 from tensorflow.keras.layers import Embedding, Flatten, Input, Dense, Dropout, Concatenate, Lambda
 from tensorflow.keras.regularizers import l2
-from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint, TensorBoard
 from recommender_system_api.utils.implicit.evaluation_implicit import margin_comparator_loss, identity_loss
-import os
-from config.settings.base import BASE_DIR
+
 
 def make_interaction_mlp(input_dim, n_hidden=1, hidden_size=64, dropout=0, l2_reg=None):
     """

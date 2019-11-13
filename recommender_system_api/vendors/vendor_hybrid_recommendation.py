@@ -4,9 +4,6 @@ from recommender_system_api.vendors.user_profiles import build_user_profile_cb, 
 from recommender_system_api.utils.implicit.user_profiles_implicit import triple_user_profiles
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-# TODO: If new_user: popularity, elif no_rating: implicit feedback/content_based, else: neural_net+content_based
-# TODO: Session-based RecSys
-
 
 def recommended_for_you(user_id, gender, vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model, triplet_model,
                         implicit_vendor_df):

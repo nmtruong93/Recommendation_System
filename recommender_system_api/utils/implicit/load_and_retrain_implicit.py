@@ -1,10 +1,8 @@
 import pandas as pd
 from tensorflow.keras.models import load_model
-from recommender_system_api.utils.implicit.data_getting_processing import get_item_detail_views_data, get_full_data
-from sklearn.model_selection import train_test_split
+from recommender_system_api.utils.implicit.data_getting_processing import get_full_data
 from recommender_system_api.utils.implicit.triplet_neural_network import create_model
-from recommender_system_api.utils.implicit.evaluation_implicit import identity_loss, sample_triplets, average_roc_auc
-from recommender_system_api.vendors.neural_network import train_model
+from recommender_system_api.utils.implicit.evaluation_implicit import sample_triplets
 from config.settings.base import BASE_DIR
 import os
 

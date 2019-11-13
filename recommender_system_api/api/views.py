@@ -5,13 +5,8 @@ from recommender_system_api.vendors.vendor_hybrid_recommendation import recommen
 from recommender_system_api.vendors.load_and_retrain import load_vendor_models
 import logging
 from ..coupons.coupons_recommendations import cb_coupon_recommendations, load_coupon_models
-from recommender_system_api.utils.implicit.data_getting_processing import get_full_data
-from recommender_system_api.utils.implicit.load_and_retrain_implicit import retrain_implicit_model, load_models
-from recommender_system_api.utils.implicit.user_profiles_implicit import triple_user_profiles
+from recommender_system_api.utils.implicit.load_and_retrain_implicit import load_models
 
-retrain_implicit_model(vendor=True)
-# prediction = triple_user_profiles(account_id=1665, gender=0, model=triplet_model, rating_df=implicit_df)
-# Get an instance of a logger
 logger = logging.getLogger(__name__)
 
 implicit_vendor_df, vendor_triplet_model = load_models(vendor=True)

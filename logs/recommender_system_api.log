@@ -1527,3 +1527,192 @@ INFO 31/Oct/2019 06:31:18 basehttp [django.server:log_message:154] "GET /api/rec
 WARNING 31/Oct/2019 06:31:19 log [django.request:log_response:228] Not Found: /favicon.ico
 WARNING 31/Oct/2019 06:31:19 basehttp [django.server:log_message:154] "GET /favicon.ico HTTP/1.1" 404 77
 INFO 31/Oct/2019 06:35:40 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 04:59:43 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 08/Nov/2019 04:59:49 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 05:02:15 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 05:03:27 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/config/settings/prod.py changed, reloading.
+INFO 08/Nov/2019 05:03:34 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 05:07:16 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 05:07:30 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 22
+INFO 08/Nov/2019 05:09:19 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 05:11:13 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 22
+INFO 08/Nov/2019 05:11:57 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 22
+INFO 08/Nov/2019 05:12:13 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 05:15:09 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 08/Nov/2019 05:15:11 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 05:15:27 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 1204
+INFO 08/Nov/2019 06:47:28 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 06:48:24 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 06:49:40 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 06:51:42 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 06:53:01 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 06:53:32 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 1204
+INFO 08/Nov/2019 06:54:12 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 08/Nov/2019 06:54:13 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 06:54:33 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 22
+INFO 08/Nov/2019 07:07:54 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 08/Nov/2019 07:07:55 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 08:28:21 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 08:28:51 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 08:43:44 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 08:47:10 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 08:49:15 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 09:56:43 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 09:59:52 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 10:03:26 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 10:07:15 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 10:13:02 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/utils/implicit/triplet_neural_network.py changed, reloading.
+INFO 08/Nov/2019 10:13:09 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 10:15:44 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 10:19:04 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 10:23:00 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 10:24:31 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 10:34:37 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 10:45:00 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 10:52:38 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 10:54:32 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 10:56:09 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 10:59:09 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 11:14:50 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 08/Nov/2019 11:24:16 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Nov/2019 08:21:46 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Nov/2019 08:39:24 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Nov/2019 08:42:39 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Nov/2019 08:43:39 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Nov/2019 08:46:22 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Nov/2019 08:54:54 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Nov/2019 08:56:16 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Nov/2019 08:57:25 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 11/Nov/2019 09:40:55 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 04:10:58 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 04:13:34 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 04:28:13 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 04:39:59 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 04:41:54 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/utils/implicit/implicit_training_network.py changed, reloading.
+INFO 12/Nov/2019 04:41:56 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 04:52:13 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 04:53:51 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 04:56:17 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 04:58:48 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 05:01:55 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 05:03:41 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 05:06:26 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 05:19:48 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 05:22:10 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 05:24:26 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 05:24:57 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 05:25:55 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 05:26:13 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 05:29:49 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/utils/implicit/implicit_user_profiles.py changed, reloading.
+INFO 12/Nov/2019 05:29:50 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 08:35:38 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 08:36:23 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 08:37:19 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 08:38:09 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 08:39:23 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 08:43:46 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 09:11:47 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 09:13:30 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 12/Nov/2019 09:13:32 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 09:15:29 basehttp [django.server:log_message:154] "GET /api/recommended_for_you/ HTTP/1.1" 200 928
+WARNING 12/Nov/2019 09:15:30 log [django.request:log_response:228] Not Found: /favicon.ico
+WARNING 12/Nov/2019 09:15:30 basehttp [django.server:log_message:154] "GET /favicon.ico HTTP/1.1" 404 77
+INFO 12/Nov/2019 09:43:02 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 09:43:25 basehttp [django.server:log_message:154] "GET /api/custom HTTP/1.1" 301 0
+ERROR 12/Nov/2019 09:43:25 log [django.request:log_response:228] Internal Server Error: /api/custom/
+Traceback (most recent call last):
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py", line 58, in get_custom_page_recommendations
+    neural_net_model, triplet_model, implicit_vendor_df)
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/vendors/vendor_hybrid_recommendation.py", line 67, in specific_recommendation
+    rating_df=implicit_vendor_df, item_id=vendor_recommendation_cb).\
+  File "/Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/utils/implicit/implicit_user_profiles.py", line 20, in triple_user_profiles
+    predictions = model.predict([account_id, gender, item_id, item_country_id])
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/training.py", line 909, in predict
+    use_multiprocessing=use_multiprocessing)
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/training_arrays.py", line 722, in predict
+    callbacks=callbacks)
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/training_arrays.py", line 410, in model_iteration
+    aggregator.finalize()
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/training_utils.py", line 349, in finalize
+    self.results = nest.pack_sequence_as(self._structure, self.results)
+  File "/Users/teecoin/PycharmProjects/recommender_env_py36/lib/python3.6/site-packages/tensorflow_core/python/util/nest.py", line 456, in pack_sequence_as
+    % len(flat_sequence))
+ValueError: Structure is a scalar but len(flat_sequence) == 0 > 1
+ERROR 12/Nov/2019 09:43:25 basehttp [django.server:log_message:154] "GET /api/custom/ HTTP/1.1" 500 27
+INFO 12/Nov/2019 10:48:03 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 10:48:18 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 22
+INFO 12/Nov/2019 10:48:35 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 22
+INFO 12/Nov/2019 10:48:44 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 10:48:53 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 22
+WARNING 12/Nov/2019 10:48:56 log [django.request:log_response:228] Not Found: /api/coupons_for_you/'
+WARNING 12/Nov/2019 10:48:56 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/' HTTP/1.1" 404 77
+INFO 12/Nov/2019 10:48:59 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 22
+INFO 12/Nov/2019 10:49:47 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 10:51:00 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 12/Nov/2019 10:52:01 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/api/views.py changed, reloading.
+INFO 12/Nov/2019 10:52:02 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 02:14:16 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 03:29:02 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 03:38:06 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/utils/implicit/elasticsearch_queries.py changed, reloading.
+INFO 13/Nov/2019 03:38:07 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 03:38:19 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 03:59:16 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 04:03:49 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 04:06:18 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 04:07:08 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 04:09:43 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 04:13:47 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 04:14:48 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 04:16:40 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 04:42:09 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 04:43:27 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 04:46:33 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 04:49:29 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 04:52:27 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 04:53:57 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 05:01:44 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 05:07:31 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 05:10:28 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 05:12:45 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 06:46:06 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 06:46:39 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/utils/implicit/load_and_retrain_implicit.py changed, reloading.
+INFO 13/Nov/2019 06:46:40 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 07:02:44 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 07:41:34 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 07:46:37 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 08:08:40 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 08:27:44 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/utils/implicit/load_and_retrain_implicit.py changed, reloading.
+INFO 13/Nov/2019 08:27:46 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 08:28:00 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 08:28:56 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 08:31:14 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 08:33:50 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/utils/implicit/load_and_retrain_implicit.py changed, reloading.
+INFO 13/Nov/2019 08:33:51 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 08:41:08 basehttp [django.server:log_message:154] "GET /api/coupons_for_you/ HTTP/1.1" 200 188
+WARNING 13/Nov/2019 08:41:08 log [django.request:log_response:228] Not Found: /favicon.ico
+WARNING 13/Nov/2019 08:41:08 basehttp [django.server:log_message:154] "GET /favicon.ico HTTP/1.1" 404 77
+INFO 13/Nov/2019 08:41:54 basehttp [django.server:log_message:154] "GET /api/recommended_for_you/ HTTP/1.1" 200 934
+INFO 13/Nov/2019 08:42:26 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/utils/implicit/load_and_retrain_implicit.py changed, reloading.
+INFO 13/Nov/2019 08:42:28 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader
+INFO 13/Nov/2019 08:44:23 autoreload [django.utils.autoreload:trigger_reload:217] /Users/teecoin/PycharmProjects/recommender_system_api/recommender_system_api/utils/implicit/load_and_retrain_implicit.py changed, reloading.
+INFO 13/Nov/2019 08:44:25 autoreload [django.utils.autoreload:run_with_reloader:597] Watching for file changes with StatReloader

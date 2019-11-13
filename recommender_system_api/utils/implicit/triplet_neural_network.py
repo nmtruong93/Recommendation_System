@@ -1,8 +1,10 @@
 from tensorflow.keras.models import Model, Sequential
 from tensorflow.keras.layers import Embedding, Flatten, Input, Dense, Dropout, Concatenate, Lambda
 from tensorflow.keras.regularizers import l2
-from recommender_system_api.utils.implicit.evaluation_implicit import margin_comparator_loss
-
+from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint, TensorBoard
+from recommender_system_api.utils.implicit.evaluation_implicit import margin_comparator_loss, identity_loss
+import os
+from config.settings.base import BASE_DIR
 
 def make_interaction_mlp(input_dim, n_hidden=1, hidden_size=64, dropout=0, l2_reg=None):
     """
@@ -29,7 +31,7 @@ def make_interaction_mlp(input_dim, n_hidden=1, hidden_size=64, dropout=0, l2_re
     return mlp
 
 
-def build_models(n_users, n_items, n_genders, n_item_countries, user_dim=32, gender_dim=16, item_dim=64,
+def create_model(n_users, n_items, n_genders, n_item_countries, user_dim=32, gender_dim=16, item_dim=64,
                  item_country_dim=16, n_hidden=1, hidden_size=64, dropout=0, l2_reg=0):
     """
     Build models to train a deep triplet network
@@ -98,7 +100,8 @@ def build_models(n_users, n_items, n_genders, n_item_countries, user_dim=32, gen
     deep_match_model = Model(inputs=[user_input, gender_input, positive_item_input, positive_item_country_input],
                              outputs=[positive_similarity])
 
-    return deep_match_model, deep_triplet_model
+    deep_triplet_model.compile(loss=identity_loss, optimizer='adam')
 
+    return deep_match_model, deep_triplet_model
 
 

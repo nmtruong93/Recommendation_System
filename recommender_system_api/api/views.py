@@ -5,16 +5,17 @@ from recommender_system_api.vendors.vendor_hybrid_recommendation import recommen
 from recommender_system_api.vendors.load_and_retrain import load_vendor_models
 import logging
 from ..coupons.coupons_recommendations import cb_coupon_recommendations, load_coupon_models
-from recommender_system_api.utils.implicit.implicit_processing import get_full_data
+from recommender_system_api.utils.implicit.data_getting_processing import get_full_data
 from recommender_system_api.utils.implicit.load_and_retrain_implicit import retrain_implicit_model, load_models
-from recommender_system_api.utils.implicit.implicit_user_profiles import triple_user_profiles
+from recommender_system_api.utils.implicit.user_profiles_implicit import triple_user_profiles
 
-
+retrain_implicit_model(vendor=True)
 # prediction = triple_user_profiles(account_id=1665, gender=0, model=triplet_model, rating_df=implicit_df)
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
-implicit_vendor_df, triplet_model = load_models(vendor=True)
+implicit_vendor_df, vendor_triplet_model = load_models(vendor=True)
+implicit_coupon_df, coupon_triplet_model = load_models(vendor=False)
 vendor_id_arr, rating_df, vendor_cosine_sim, neural_net_model = load_vendor_models()
 cosine_similarity, coupon_indices = load_coupon_models()
 
@@ -36,7 +37,7 @@ def get_recommended_for_you(request):
         gender = int(request.GET.get("account_id", 0))
 
         recommendation = recommended_for_you(account_id, gender, vendor_id_arr, rating_df,
-                                             vendor_cosine_sim, neural_net_model, triplet_model, implicit_vendor_df)
+                                             vendor_cosine_sim, neural_net_model, vendor_triplet_model, implicit_vendor_df)
     except Exception as e:
         print(str(e))
 
@@ -55,7 +56,7 @@ def get_custom_page_recommendations(request, user_id=15898, gender=0, vendor_id=
     :return:
     """
     recommendation = specific_recommendation(user_id, gender, vendor_id, vendor_id_arr, rating_df, vendor_cosine_sim,
-                                             neural_net_model, triplet_model, implicit_vendor_df)
+                                             neural_net_model, vendor_triplet_model, implicit_vendor_df)
 
     return Response({'vendor_recommendation': recommendation})
 
@@ -72,8 +73,11 @@ def get_coupons_for_you(request):
 
     recommendation = []
     try:
-        coupon_id = int(request.GET.get("coupon_id", 6))
-        recommendation = cb_coupon_recommendations(coupon_id, coupon_indices, cosine_similarity)
+        coupon_id = int(request.GET.get("coupon_id", 64))
+        recommendation = cb_coupon_recommendations(account_id=15898, gender=0, coupon_id=coupon_id,
+                                                   coupon_indices_list=coupon_indices, cosine_sim=cosine_similarity,
+                                                   triplet_model=coupon_triplet_model,
+                                                   implicit_coupon_df= implicit_coupon_df)
     except Exception as e:
         print(str(e))
 

@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 from recommender_system_api.vendors.user_profiles import build_user_profile_cb, build_user_profile_nn
-from recommender_system_api.utils.implicit.implicit_user_profiles import triple_user_profiles
+from recommender_system_api.utils.implicit.user_profiles_implicit import triple_user_profiles
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 # TODO: If new_user: popularity, elif no_rating: implicit feedback/content_based, else: neural_net+content_based
@@ -60,14 +60,16 @@ def specific_recommendation(user_id, gender, vendor_id, vendor_id_arr, rating_df
     """
 
     if user_id not in rating_df.user_id.unique():
-        vendor_recommendation_cb = build_user_profile_cb(user_id, vendor_id_arr, cosine_sim=vendor_cosine_sim,
+        vendor_recommendations = build_user_profile_cb(user_id, vendor_id_arr, cosine_sim=vendor_cosine_sim,
                                                       rating_df=rating_df, vendor_id=vendor_id)
 
-        vendor_recommendation = triple_user_profiles(account_id=user_id, gender=gender, model=triplet_model,
-                                                     rating_df=implicit_vendor_df, item_id=vendor_recommendation_cb).\
-            sort_values(by='triplet_rating', ascending=False)
+        if len(implicit_vendor_df[implicit_vendor_df.item_id.isin(vendor_recommendations)].item_id.unique()) > 10:
 
-        vendor_recommendation = vendor_recommendation.actual_item_id.to_numpy()
+            vendor_recommendation = triple_user_profiles(account_id=user_id, gender=gender, model=triplet_model,
+                                                         rating_df=implicit_vendor_df, item_id=vendor_recommendations).\
+                sort_values(by='triplet_rating', ascending=False)
+
+            vendor_recommendations = vendor_recommendation.actual_item_id.to_numpy()
     else:
         vendor_recommendation_cb = build_user_profile_cb(user_id, vendor_id_arr, cosine_sim=vendor_cosine_sim,
                                                          rating_df=rating_df, vendor_id=vendor_id)
@@ -75,6 +77,6 @@ def specific_recommendation(user_id, gender, vendor_id, vendor_id_arr, rating_df
         vendor_recommendation = build_user_profile_nn(user_id, gender, model=neural_net_model, rating_df=rating_df,
                                                       vendor_id=vendor_recommendation_cb).sort_values('neural_net_rating', ascending=False)
 
-        vendor_recommendation = vendor_recommendation.index.to_numpy()
+        vendor_recommendations = vendor_recommendation.index.to_numpy()
 
-    return vendor_recommendation
+    return vendor_recommendations

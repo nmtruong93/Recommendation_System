@@ -83,7 +83,7 @@ def get_vendor_detail_views(path):
 def get_coupon_detail_views(path):
     query = {
       "_source": ["account", "path"],
-      "size": 100,
+      "size": 10000,
       "query": {
         "bool": {
           "must": [

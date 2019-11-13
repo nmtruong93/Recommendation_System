@@ -74,22 +74,23 @@ def average_roc_auc(match_model, train_data, test_data, dataset_df):
     return sum(user_auc_scores) / len(user_auc_scores)
 
 
-def sample_triplets(train_df, n_items, dataset_df, random_seed=0):
+def sample_triplets(dataset_df, n_items, random_seed=0):
     """
     Sample negatives at random
-    :param train_df:
+    :param dataset_df:
     :param n_items:
     :param random_seed:
     :return:
     """
     neg_random_state = np.random.RandomState(random_seed)
-    user_ids = train_df['account_id'].to_numpy()
-    gender = train_df['gender'].to_numpy()
-    positive_item_ids = train_df['item_id'].to_numpy()
-    positive_item_country_id = train_df['item_country_id'].to_numpy()
+    user_ids = dataset_df['account_id'].to_numpy()
+    gender = dataset_df['gender'].to_numpy()
+    positive_item_ids = dataset_df['item_id'].to_numpy()
+    positive_item_country_id = dataset_df['item_country_id'].to_numpy()
 
-    negative_item_ids = neg_random_state.choice(np.setdiff1d(np.arange(1, n_items), positive_item_ids),
-                                                  size=len(user_ids))
+    # negative_item_ids = neg_random_state.choice(np.setdiff1d(np.arange(1, n_items), positive_item_ids),
+    #                                               size=len(user_ids))
+    negative_item_ids = neg_random_state.randint(low=1, high=n_items, size=len(user_ids))
     negative_item_country_ids = []
     for i in negative_item_ids:
         item_country_id = dataset_df.loc[dataset_df.item_id == i].item_country_id.values[0]

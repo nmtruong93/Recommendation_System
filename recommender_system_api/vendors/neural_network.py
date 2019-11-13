@@ -49,13 +49,13 @@ def create_model(params):
 
 
 def train_model(x_train, y_train, model_path, model):
-    checkpoint_path = os.path.join(model_path, 'vendor_neural_net.h5')
+    checkpoint_path = os.path.join(model_path, 'checkpoint_model.h5')
     model_checkpoint = ModelCheckpoint(filepath=checkpoint_path, monitor='val_loss', verbose=1,
                                        save_best_only=True, mode='auto', save_weights_only=True)
     tensor_board = TensorBoard(log_dir=os.path.join(BASE_DIR, 'logs'), histogram_freq=0, write_graph=True, write_images=True)
     early_stopping = EarlyStopping(monitor='val_loss', min_delta=0.0001, patience=3, verbose=1,
                                    mode='auto', restore_best_weights=True)
-    history = model.fit(x=x_train, y=y_train, validation_split=0.2, epochs=100, verbose=1,
+    history = model.fit(x=x_train, y=y_train, validation_split=0.2, epochs=30, verbose=1,
                         callbacks=[model_checkpoint, early_stopping, tensor_board])
     return model, history
 

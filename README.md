@@ -1,5 +1,4 @@
 Recommendation System
-dev: recsys-dev.tee-coin.com
 =======
 
 import nltk
